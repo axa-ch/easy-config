@@ -1,0 +1,15 @@
+.bem-pattern-invalid {
+    background-color: aqua;
+}
+
+.bem-pattern-foo .bem-pattern-valid__inner {
+    background: blue;
+}
+
+.bem-pattern-invalid .bem-pattern-invalid--text {
+    display: inline;
+}
+
+.bem-pattern-invalid .bem-pattern-invalid--text__active {
+    display: block;
+}

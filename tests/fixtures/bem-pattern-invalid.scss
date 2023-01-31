@@ -1,0 +1,20 @@
+.bem-pattern-invalid {
+  // Vars
+
+  // Support
+
+  // Module
+  & {
+      .foobar--inner {
+          background: blue;
+      }
+
+      .bem-pattern-invalid--box__active {
+          padding: 0 16px;
+      }
+  }
+
+  // Facets
+
+  // States
+}

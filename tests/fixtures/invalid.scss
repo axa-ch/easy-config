@@ -1,0 +1,10 @@
+@mixin bar {
+    color: blue;
+}
+
+.foo {
+  position: relative;
+    @include bar;
+  
+    @foobar bar;
+}

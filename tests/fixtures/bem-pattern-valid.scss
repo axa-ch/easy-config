@@ -1,0 +1,32 @@
+.bem-pattern-valid {
+    // Vars
+
+    // Support
+
+    // Module
+    & {
+        .bem-pattern-valid__inner {
+            background: blue;
+        }
+
+        .bem-pattern-valid__box {
+            padding: 0 16px;
+        }
+
+        .bem-pattern-valid__text {
+            @include mq('<=sm') {
+                display: none;
+            }
+        }
+        
+        .bem-pattern-valid__text--active {
+            @include mq('<=sm') {
+                display: block;
+            }
+        }
+    }
+
+    // Facets
+
+    // States
+}
