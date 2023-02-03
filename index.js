@@ -2,6 +2,8 @@ const eslintBase = require.resolve('./eslint/eslint-base')
 const eslintTypescript = require.resolve('./eslint/eslint-typescript')
 const eslintReact = require.resolve('./eslint/eslint-react')
 
+const tsConfigBase = require('./ts-config/ts-config-base')
+
 const prettierBase = require('./prettier/prettier-base')
 
 const stylelintBase = require.resolve('./stylelint/stylelint-base')
@@ -27,4 +29,8 @@ module.exports.stylelint = {
   scss: stylelintScss,
   bemPattern: stylelintBemPattern,
   order: stylelintOrder,
+}
+
+module.exports.tsConfig = {
+  base: tsConfigBase,
 }

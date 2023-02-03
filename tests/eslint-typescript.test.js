@@ -17,8 +17,8 @@ test('ESLint JS config', async (assert) => {
     },
   })
   const [validResult, invalidResult] = await eslint.lintFiles([
-    'tests/fixtures/valid.ts',
-    'tests/fixtures/invalid.ts',
+    'tests/fixtures/valid-ts.ts',
+    'tests/fixtures/invalid-ts.ts',
   ])
 
   assert.deepEqual(

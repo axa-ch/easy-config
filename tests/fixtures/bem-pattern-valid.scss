@@ -18,7 +18,7 @@
                 display: none;
             }
         }
-        
+
         .bem-pattern-valid__text--active {
             @include mq('<=sm') {
                 display: block;

@@ -9,9 +9,10 @@ test('Prettier JS config', async (assert) => {
     ...api.prettier.base,
     filepath: 'test/fixtures/valid.js',
   }
+
   const [rawValidJS, rawInvalidJS] = await Promise.all([
-    fs.readFile('tests/fixtures/valid.js'),
-    fs.readFile('tests/fixtures/invalid.js'),
+    fs.readFile('tests/fixtures/valid-ts.ts'),
+    fs.readFile('tests/fixtures/invalid-ts.ts'),
   ])
 
   const prettierOkOnValidJS = prettier.check(rawValidJS.toString(), config)
