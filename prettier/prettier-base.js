@@ -1,11 +1,9 @@
 module.exports = {
-  // semi: true,
-  semi: false,
+  semi: true,
   tabWidth: 2,
   useTabs: false,
   singleQuote: true,
-  // printWidth: 120,
-  printWidth: 80,
+  printWidth: 120,
   bracketSpacing: true,
   trailingComma: 'all',
 }
