@@ -1,7 +1,10 @@
 export const fn = (foo) => {
-  const bar = { foo }
-  return {
-    ...bar,
-    foo: undefined,
-  }
+    const bar = {
+        foo,
+        est: 'test',
+    }
+    return {
+        ...bar,
+        test1: 'test',
+    }
 }

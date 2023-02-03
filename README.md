@@ -16,7 +16,7 @@ Notice that all the `@myaxa-config` peer dependencies should be installed manual
 npm i -D eslint@8 prettier@2
 
 # Install the plugins used in @myaxa-config
-npm i -D eslint-config-airbnb-base@15 eslint-plugin-prettier@4 eslint-config-prettier@8 eslint-plugin-fp@2 eslint-plugin-import@2
+npm i -D eslint-config-airbnb-base@15 eslint-plugin-prettier@4 eslint-config-prettier@8 eslint-plugin-import@2
 
 # Install @myaxa-config
 npm i -D @myaxa-config

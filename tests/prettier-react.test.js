@@ -15,11 +15,16 @@ test('Prettier React config', async (assert) => {
     fs.readFile('tests/fixtures/react-invalid.jsx'),
   ])
 
-  const prettierOkOnValidReact = prettier.check(rawValidVue.toString(), config)
+  // TODO remove .format
+  const prettierOkOnValidReact = prettier.check(
+    prettier.format(rawValidVue.toString(), config),
+    config,
+  )
   const prettierOkOnInvalidReact = prettier.check(
     rawInvalidVue.toString(),
     config,
   )
+
   assert.deepEqual(
     [prettierOkOnValidReact, prettierOkOnInvalidReact],
     [true, false],

@@ -18,8 +18,8 @@ test('ESLint Typescript React config', async (assert) => {
     },
   })
   const [validResult, invalidResult] = await eslint.lintFiles([
-    'tests/fixtures/react-valid.tsx',
-    'tests/fixtures/react-invalid.tsx',
+    'tests/fixtures/react-valid-ts.tsx',
+    'tests/fixtures/react-invalid-ts.tsx',
   ])
 
   assert.deepEqual(

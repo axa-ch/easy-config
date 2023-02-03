@@ -11,7 +11,10 @@ test('Stylelint base config', async (assert) => {
     config: {
       extends: [api.stylelint.base],
     },
-    files: ['tests/fixtures/valid.css', 'tests/fixtures/invalid.css'],
+    files: [
+      'tests/fixtures/order-valid.css',
+      'tests/fixtures/order-invalid.css',
+    ],
   })
   const [validResult, invalidResult] = results
 
