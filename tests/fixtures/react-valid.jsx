@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export const Component = ( {children } ) => {
+export const Component = ({ children }) => {
     const [count, setCount] = useState(0);
     return (
         <h1
