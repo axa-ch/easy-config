@@ -1,6 +1,6 @@
-const namePattern = '[a-z]+([a-z0-9-]+[a-z0-9]+)?$'
-const publicNamePattern = `^${namePattern}`
-const privateNamePattern = `^[_]?${namePattern}`
+const namePattern = '[a-z]+([a-z0-9-]+[a-z0-9]+)?$';
+const publicNamePattern = `^${namePattern}`;
+const privateNamePattern = `^[_]?${namePattern}`;
 
 module.exports = {
   plugins: ['stylelint-scss'],
@@ -83,4 +83,4 @@ module.exports = {
       },
     ],
   },
-}
+};
