@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react';
 
 export const Component = ( {children } ) => {
     const [count, setCount] = useState(0);
@@ -11,5 +11,5 @@ export const Component = ( {children } ) => {
             <br />
             {children}
         </h1>
-    )
+    );
 }

@@ -8,11 +8,9 @@ module.exports = {
     'react/jsx-no-undef': 'error',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
-    'react/react-in-jsx-scope': 0,
-    // 'react/jsx-uses-react': 0,
-    // 'import/extensions': 0,
-    // singleAttributePerLine: 2,
-    // semi: 2,
+    'react/react-in-jsx-scope': 'off',
+    'react/jsx-uses-react': 'error',
+    'import/extensions': 'off',
   },
   settings: {
     'import/resolver': {
