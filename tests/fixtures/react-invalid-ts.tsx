@@ -1,5 +1,6 @@
 import { useState, FC } from 'react'
 
+// @ts-ignore
 export const Component: FC = ({children}) => {
   if (!children) {
       return null
