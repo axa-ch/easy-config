@@ -19,4 +19,4 @@ module.exports = {
     'fp/no-mutating-assign': 'off',
     'fp/no-proxy': 'off',
   },
-}
+};

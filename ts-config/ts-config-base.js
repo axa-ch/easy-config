@@ -6,4 +6,4 @@ module.exports = {
     jsx: 'react-jsx',
     lib: ['dom', 'dom.iterable', 'esnext'],
   },
-}
+};

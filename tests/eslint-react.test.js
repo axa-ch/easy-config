@@ -1,10 +1,9 @@
-const test = require('tape')
-const { ESLint } = require('eslint')
+const test = require('tape');
+const { ESLint } = require('eslint');
 
-const api = require('../index')
+const api = require('../index');
 
-const isLintResultValid = ({ errorCount, warningCount }) =>
-  errorCount === 0 && warningCount === 0
+const isLintResultValid = ({ errorCount, warningCount }) => errorCount === 0 && warningCount === 0;
 
 test('ESLint React config', async (assert) => {
   const eslintReact = new ESLint({
@@ -16,17 +15,17 @@ test('ESLint React config', async (assert) => {
         'import/no-unresolved': 'off',
       },
     },
-  })
+  });
 
   const [validResult, invalidResult] = await eslintReact.lintFiles([
     'tests/fixtures/react-valid.jsx',
     'tests/fixtures/react-invalid.jsx',
-  ])
+  ]);
 
   assert.deepEqual(
     [isLintResultValid(validResult), isLintResultValid(invalidResult)],
     [true, false],
     'Validates React components against the config.',
-  )
-  assert.end()
-})
+  );
+  assert.end();
+});

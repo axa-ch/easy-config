@@ -1,5 +1,5 @@
-const { eslint } = require('./index')
+const { eslint } = require('./index');
 
 module.exports = {
   extends: [eslint.base],
-}
+};

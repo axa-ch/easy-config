@@ -1,10 +1,7 @@
 module.exports = {
   plugins: ['stylelint-order'],
   rules: {
-    'order/order': [
-      ['dollar-variables', 'declarations', 'rules'],
-      { severity: 'warning' },
-    ],
+    'order/order': [['dollar-variables', 'declarations', 'rules'], { severity: 'warning' }],
     'order/properties-order': [
       [
         // Strong properties (for easy debugging)
@@ -24,27 +21,12 @@ module.exports = {
         // Flexible layout properties
         {
           order: 'flexible',
-          properties: [
-            'align-content',
-            'align-items',
-            'align-self',
-            'flex',
-            'justify-content',
-          ],
+          properties: ['align-content', 'align-items', 'align-self', 'flex', 'justify-content'],
         },
         // Basic box model properties
         {
           order: 'flexible',
-          properties: [
-            'width',
-            'max-width',
-            'min-width',
-            'height',
-            'max-height',
-            'min-height',
-            'margin',
-            'padding',
-          ],
+          properties: ['width', 'max-width', 'min-width', 'height', 'max-height', 'min-height', 'margin', 'padding'],
         },
       ],
       {
@@ -52,4 +34,4 @@ module.exports = {
       },
     ],
   },
-}
+};

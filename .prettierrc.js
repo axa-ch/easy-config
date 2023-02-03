@@ -1,3 +1,3 @@
-const { prettier } = require('./index')
+const { prettier } = require('./index');
 
-module.exports = prettier.base
+module.exports = prettier.base;

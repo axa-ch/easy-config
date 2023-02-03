@@ -1,10 +1,9 @@
-const test = require('tape')
-const { ESLint } = require('eslint')
+const test = require('tape');
+const { ESLint } = require('eslint');
 
-const api = require('../index')
+const api = require('../index');
 
-const isLintResultValid = ({ errorCount, warningCount }) =>
-  errorCount === 0 && warningCount === 0
+const isLintResultValid = ({ errorCount, warningCount }) => errorCount === 0 && warningCount === 0;
 
 test('ESLint JS config', async (assert) => {
   const eslint = new ESLint({
@@ -15,16 +14,13 @@ test('ESLint JS config', async (assert) => {
         'prettier/prettier': ['error', api.prettier.base],
       },
     },
-  })
-  const [validResult, invalidResult] = await eslint.lintFiles([
-    'tests/fixtures/valid.js',
-    'tests/fixtures/invalid.js',
-  ])
+  });
+  const [validResult, invalidResult] = await eslint.lintFiles(['tests/fixtures/valid.js', 'tests/fixtures/invalid.js']);
 
   assert.deepEqual(
     [isLintResultValid(validResult), isLintResultValid(invalidResult)],
     [true, false],
     'Validates js files against the config.',
-  )
-  assert.end()
-})
+  );
+  assert.end();
+});
