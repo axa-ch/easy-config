@@ -98,6 +98,22 @@ module.exports = {
   extends: [eslint.base, eslint.react, eslint.typescript],
 }
 ```
+# Typescript Setup
+Make sure to have Typescript installed in your project before proceeding with the following steps
+
+```shell
+npm i typescirpt
+```
+### Typescript Basic Config
+To use the basic myaxa-config typescript config in your project you can set up your `.tsconfig.json` file as follows
+
+```json
+{
+    "extends": "@myaxa-config/tsConfig.base"
+}
+
+```
+
 
 # Stylelint Setup
 
