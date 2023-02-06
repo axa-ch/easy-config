@@ -1,8 +1,6 @@
 # myaxa-config
 
 [![Build Status][ci-image]][ci-url]
-[![NPM version][npm-version-image]][npm-url]
-[![NPM downloads][npm-downloads-image]][npm-url]
 [![MIT License][license-image]][license-url]
 
 Opinionated set of eslint and prettier rules
@@ -196,7 +194,3 @@ module.exports = {
 [ci-url]: https://github.com/axa-ch/myaxa-config/actions
 [license-image]: http://img.shields.io/badge/license-MIT-000000.svg?style=flat-square
 [license-url]: LICENSE
-[npm-version-image]: http://img.shields.io/npm/v/@myaxa-config.svg?style=flat-square
-[npm-downloads-image]: http://img.shields.io/npm/dm/@myaxa-config.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/@myaxa-config
-[codeclimate-image]: https://api.codeclimate.com/v1/badges/9b0baa585855a19c09a1/maintainability
