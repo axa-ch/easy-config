@@ -3,10 +3,6 @@
   "version": "0.0.1",
   "description": "Opinionated set of eslint and prettier rules",
   "main": "index.js",
-  "engines": {
-    "npm": ">=6",
-    "node": ">=16"
-  },
   "scripts": {
     "check-format": "prettier --check \"./**/*.js\"",
     "lint": "eslint ./",
