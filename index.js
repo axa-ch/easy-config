@@ -2,7 +2,7 @@ const eslintBase = require.resolve('./eslint/eslint-base');
 const eslintTypescript = require.resolve('./eslint/eslint-typescript');
 const eslintReact = require.resolve('./eslint/eslint-react');
 
-const tsConfigBase = require('./ts-config/ts-config-base');
+const tsConfigBase = require('./ts-config/base.json');
 
 const prettierBase = require('./prettier/prettier-base');
 

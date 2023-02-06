@@ -109,7 +109,7 @@ To use the basic myaxa-config typescript config in your project you can set up y
 
 ```json
 {
-    "extends": "@myaxa-config/tsConfig.base"
+    "extends": "@axa-ch/myaxa-config/ts-config/base"
 }
 
 ```
