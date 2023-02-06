@@ -1,5 +1,6 @@
 module.exports = {
   plugins: ['stylelint-selector-bem-pattern'],
+  customSyntax: 'postcss-scss',
   rules: {
     'plugin/selector-bem-pattern': {
       implicitComponents: true,
