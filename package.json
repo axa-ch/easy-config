@@ -17,6 +17,7 @@
     "index.js",
     "prettier",
     "eslint",
+    "ts-config",
     "stylelint",
     "LICENSE"
   ],
