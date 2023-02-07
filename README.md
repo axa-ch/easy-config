@@ -85,7 +85,8 @@ To enable linting for React/JSX files, you should add the following extension to
 const { eslint } = require('@axa-ch/myaxa-config')
 
 module.exports = {
-  extends: [eslint.base, eslint.react],
+-  extends: [eslint.base],
++  extends: [eslint.base, eslint.react],
 }
 ```
 
@@ -95,7 +96,8 @@ You don't need any specific plugins for Typescript support with React, just enab
 const { eslint } = require('@axa-ch/myaxa-config')
 
 module.exports = {
-  extends: [eslint.base, eslint.react, eslint.typescript],
+-  extends: [eslint.base],
++  extends: [eslint.base, eslint.react, eslint.typescript],
 }
 ```
 
