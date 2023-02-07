@@ -7,13 +7,13 @@ Opinionated set of eslint and prettier rules
 
 # Installation
 
-Notice that all the `@myaxa-config` peer dependencies should be installed manually. For this reason we need to explicitly define their major version.
+Notice that all the `myaxa-config` peer dependencies should be installed manually. For this reason we need to explicitly define their major version.
 
 ```shell
 # Install the linting tools
 npm i -D eslint@8 prettier@2
 
-# Install the plugins used in @myaxa-config
+# Install the plugins used in myaxa-config
 npm i -D eslint-config-airbnb-base@15 eslint-plugin-prettier@4 eslint-config-prettier@8 eslint-plugin-import@2
 
 # Install this package directly from github
@@ -37,7 +37,7 @@ These plugins assume a `tsconfig.json` file in your project root ([Docs](https:/
 
 # Eslint Setup
 
-Set up your eslint config (`.eslintrc.js`) file as follows to enable the `@myaxa-config` eslint rules in your project
+Set up your eslint config (`.eslintrc.js`) file as follows to enable the `myaxa-config` eslint rules in your project
 
 ```js
 const { eslint } = require('@axa-ch/myaxa-config');
