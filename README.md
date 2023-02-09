@@ -106,7 +106,7 @@ module.exports = {
 Make sure to have Typescript installed in your project before proceeding with the following steps
 
 ```shell
-npm i typescirpt@4
+npm i typescript@4
 ```
 
 ### Typescript Basic Config

@@ -13,11 +13,6 @@ module.exports = {
     'import/extensions': 'off',
   },
   settings: {
-    'import/resolver': {
-      node: {
-        extensions: ['.js', '.ts', '.d.ts', '.jsx', '.tsx'],
-      },
-    },
     react: {
       version: 'detect',
     },

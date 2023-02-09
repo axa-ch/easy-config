@@ -7,17 +7,10 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['*.js', '*.jsx'],
+      files: ['*.js', '*.cjs'],
       rules: {
         '@typescript-eslint/no-var-requires': 'off',
       },
     },
   ],
-  settings: {
-    'import/resolver': {
-      node: {
-        extensions: ['.js', '.ts', '.d.ts'],
-      },
-    },
-  },
 };
