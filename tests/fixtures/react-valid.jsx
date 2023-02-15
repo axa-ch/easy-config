@@ -4,7 +4,7 @@ export const Component = ({ children }) => {
   const [count, setCount] = useState(0);
   return (
     <h1
-      className="foo"
+      className='foo'
       onClick={() => setCount((v) => v + 1)}
     >
       {count}
