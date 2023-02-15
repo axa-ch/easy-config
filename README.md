@@ -7,17 +7,17 @@ Opinionated set of eslint and prettier rules
 
 # Installation
 
-Notice that all the `@myaxa-config` peer dependencies should be installed manually. For this reason we need to explicitly define their major version.
+Notice that all the `myaxa-config` peer dependencies should be installed manually. For this reason we need to explicitly define their major version.
 
 ```shell
 # Install the linting tools
 npm i -D eslint@8 prettier@2
 
-# Install the plugins used in @myaxa-config
+# Install the plugins used in myaxa-config
 npm i -D eslint-config-airbnb-base@15 eslint-plugin-prettier@4 eslint-config-prettier@8 eslint-plugin-import@2
 
-# Install @myaxa-config
-npm i -D @myaxa-config
+# Install this package directly from github
+npm i -D axa-ch/myaxa-config
 ```
 
 For Typescript support
@@ -27,6 +27,8 @@ npm i -D typescript@4 @typescript-eslint/eslint-plugin@5 @typescript-eslint/pars
 ```
 
 These plugins assume a `tsconfig.json` file in your project root ([Docs](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)).
+<br/>
+[See also our myaxa typescript setup](https://github.com/axa-ch/myaxa-config#typescript-setup)
 
 ## Optional IDE Configuration
 
@@ -35,37 +37,35 @@ These plugins assume a `tsconfig.json` file in your project root ([Docs](https:/
 
 # Eslint Setup
 
-Set up your eslint config (`.eslintrc.js`) file as follows to enable the `@myaxa-config` eslint rules in your project
+Set up your eslint config (`.eslintrc.js`) file as follows to enable the `myaxa-config` eslint rules in your project
 
 ```js
-const { eslint } = require('@myaxa-config')
+const { eslint } = require('@axa-ch/myaxa-config');
 
 module.exports = {
   extends: [eslint.base],
-}
+};
 ```
 
 To enable Typescript support, simply add the `eslint.typescript` settings to the extension list
 
 ```js
-const { eslint } = require('@myaxa-config')
+const { eslint } = require('@axa-ch/myaxa-config');
 
 module.exports = {
   extends: [eslint.base, eslint.typescript],
-}
+};
 ```
 
 # Prettier Setup
 
-Set up your prettier config (`.prettierrc.js`) file as follows to enable the `@myaxa-config` prettier rules in your project
+Set up your prettier config (`.prettierrc.js`) file as follows to enable the `myaxa-config` prettier rules in your project
 
 ```js
-const { prettier } = require('@myaxa-config')
+const { prettier } = require('@axa-ch/myaxa-config');
 
-module.exports = prettier.base
+module.exports = prettier.base;
 ```
-
-
 
 # React Setup
 
@@ -82,38 +82,42 @@ npm i -D eslint-plugin-react@7 eslint-plugin-react-hooks@4
 To enable linting for React/JSX files, you should add the following extension to your eslint config (`.eslintrc.js`) file:
 
 ```diff
-const { eslint } = require('@myaxa-config')
+const { eslint } = require('@axa-ch/myaxa-config')
 
 module.exports = {
-  extends: [eslint.base, eslint.react],
+-  extends: [eslint.base],
++  extends: [eslint.base, eslint.react],
 }
 ```
 
 You don't need any specific plugins for Typescript support with React, just enable both configs in your `.eslintrc.js`.
 
 ```diff
-const { eslint } = require('@myaxa-config')
+const { eslint } = require('@axa-ch/myaxa-config')
 
 module.exports = {
-  extends: [eslint.base, eslint.react, eslint.typescript],
+-  extends: [eslint.base],
++  extends: [eslint.base, eslint.react, eslint.typescript],
 }
 ```
+
 # Typescript Setup
+
 Make sure to have Typescript installed in your project before proceeding with the following steps
 
 ```shell
-npm i typescirpt
+npm i typescript@4
 ```
+
 ### Typescript Basic Config
+
 To use the basic myaxa-config typescript config in your project you can set up your `.tsconfig.json` file as follows
 
 ```json
 {
-    "extends": "@axa-ch/myaxa-config/ts-config/base"
+  "extends": "@axa-ch/myaxa-config/ts-config/base"
 }
-
 ```
-
 
 # Stylelint Setup
 
@@ -130,11 +134,11 @@ npm i stylelint@14 stylelint-prettier@2 stylelint-config-prettier@9
 To use only the basic myaxa-config stylelint rules in your project you can set up your `.stylelintrc.js` file as follows
 
 ```js
-const { stylelint } = require('@myaxa-config')
+const { stylelint } = require('@axa-ch/myaxa-config');
 
 module.exports = {
   extends: [stylelint.base],
-}
+};
 ```
 
 ### Stylelint SCSS Config
@@ -149,14 +153,14 @@ npm i stylelint-scss@4 postcss-scss@4 postcss@8
 You can then update your `.stylelintrc.js` file as follows
 
 ```diff
-const { stylelint } = require('@myaxa-config')
+const { stylelint } = require('@axa-ch/myaxa-config');
 
 module.exports = {
   extends: [
     stylelint.base,
 +   stylelint.scss,
   ],
-}
+};
 ```
 
 ### Stylelint BEM Patterns Config
@@ -171,7 +175,7 @@ npm i stylelint-selector-bem-pattern@2
 You can then update your `.stylelintrc.js` file as follows
 
 ```diff
-const { stylelint } = require('@myaxa-config')
+const { stylelint } = require('@axa-ch/myaxa-config');
 
 module.exports = {
   extends: [
@@ -179,7 +183,7 @@ module.exports = {
     stylelint.scss,
 +   stylelint.bemPattern,
   ],
-}
+};
 ```
 
 ### Stylelint Order Config
@@ -188,13 +192,13 @@ Do you care about the order of your css properties? In that case the myaxa-confi
 First install `stylelint-order`
 
 ```shell
-npm i stylelint-order@5
+npm i stylelint-order@6
 ```
 
 Then update your `.stylelintrc.js` file as follows
 
 ```diff
-const { stylelint } = require('@myaxa-config')
+const { stylelint } = require('@axa-ch/myaxa-config');
 
 module.exports = {
   extends: [
@@ -203,7 +207,7 @@ module.exports = {
     stylelint.bemPattern,
 +   stylelint.order,
   ],
-}
+};
 ```
 
 [ci-image]: https://img.shields.io/github/actions/workflow/status/axa-ch/myaxa-config/ci.yml?style=flat-square&branch=main

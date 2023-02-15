@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['plugin:react/recommended', 'plugin:prettier/recommended'],
+  extends: ['plugin:react/recommended'],
   plugins: ['react-hooks'],
   rules: {
     'react/prop-types': 'off',
@@ -13,11 +13,6 @@ module.exports = {
     'import/extensions': 'off',
   },
   settings: {
-    'import/resolver': {
-      node: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
-      },
-    },
     react: {
       version: 'detect',
     },
