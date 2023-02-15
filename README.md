@@ -210,6 +210,13 @@ module.exports = {
 };
 ```
 
+
+### Release new Version of myaxa-config
+```shell
+npm version patch && git push --tags
+```
+[If you want to release a specific version of this package read the docs.](https://docs.npmjs.com/cli/v8/commands/npm-version)
+
 [ci-image]: https://img.shields.io/github/actions/workflow/status/axa-ch/myaxa-config/ci.yml?style=flat-square&branch=main
 [ci-url]: https://github.com/axa-ch/myaxa-config/actions
 [license-image]: http://img.shields.io/badge/license-MIT-000000.svg?style=flat-square
