@@ -18,6 +18,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "strictNullChecks": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "noUnusedLocals": true
   }
 }
