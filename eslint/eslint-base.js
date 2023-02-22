@@ -13,5 +13,6 @@ module.exports = {
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',
     'no-param-reassign': ['error', { props: false }],
+    'linebreak-style': ['error', 'unix'],
   },
 };

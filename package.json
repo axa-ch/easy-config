@@ -1,6 +1,6 @@
 {
   "name": "@axa-ch/myaxa-config",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "Opinionated set of eslint and prettier rules",
   "main": "index.js",
   "scripts": {
