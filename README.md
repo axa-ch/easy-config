@@ -126,7 +126,7 @@ To use the basic myaxa-config typescript config in your project you can set up y
 Make sure to have Stylelint installed in your project before proceeding with the following steps
 
 ```shell
-npm i stylelint@14 stylelint-prettier@2 stylelint-config-prettier@9
+npm i stylelint@15 stylelint-config-standard@30
 ```
 
 ### Stylelint Basic Rules Config
@@ -144,10 +144,10 @@ module.exports = {
 ### Stylelint SCSS Config
 
 Does your project use SCSS files? No problems... you can enable the myaxa-config stylelint rules for scss.
-First you need to install the `stylelint-scss` dependency
+First you need to install the `stylelint-config-standard-scss` dependency
 
 ```shell
-npm i stylelint-scss@4 postcss-scss@4 postcss@8
+npm i stylelint-config-standard-scss@7
 ```
 
 You can then update your `.stylelintrc.js` file as follows
@@ -210,11 +210,12 @@ module.exports = {
 };
 ```
 
-
 ### Release new Version of myaxa-config
+
 ```shell
 npm version patch && git push --tags
 ```
+
 [If you want to release a specific version of this package read the docs.](https://docs.npmjs.com/cli/v8/commands/npm-version)
 
 [ci-image]: https://img.shields.io/github/actions/workflow/status/axa-ch/myaxa-config/ci.yml?style=flat-square&branch=main

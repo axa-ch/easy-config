@@ -2,6 +2,8 @@ module.exports = {
   plugins: ['stylelint-selector-bem-pattern'],
   customSyntax: 'postcss-scss',
   rules: {
+    'selector-class-pattern': null,
+    'no-duplicate-selectors': null,
     'plugin/selector-bem-pattern': {
       implicitComponents: true,
       componentName: '^[a-z]+(?:-[a-z]+)*(--|__|$)?',

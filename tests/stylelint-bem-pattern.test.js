@@ -25,7 +25,7 @@ test('Stylelint SCSS BEM pattern config', async (assert) => {
 test('Stylelint CSS BEM pattern config', async (assert) => {
   const { results } = await stylelint.lint({
     config: {
-      extends: [api.stylelint.base, api.stylelint.bemPattern],
+      extends: [api.stylelint.base, api.stylelint.scss, api.stylelint.bemPattern],
     },
     files: ['tests/fixtures/bem-pattern-valid.scss', 'tests/fixtures/bem-pattern-invalid.scss'],
   });
