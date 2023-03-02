@@ -21,6 +21,9 @@
     "type": "git",
     "url": "git+https://github.com/axa-ch/myaxa-config"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "keywords": [
     "eslint",
     "prettier",
