@@ -8,7 +8,7 @@ Opinionated set of eslint and prettier rules
 # Installation
 
 ```shell
-npm npm i @axa-ch/myaxa-config --registry=https://npm.pkg.github.com      
+npm i @axa-ch/myaxa-config --registry=https://npm.pkg.github.com      
 ```
 
 Notice that all the `myaxa-config` peer dependencies should be installed manually. For this reason we need to explicitly define their major version.
