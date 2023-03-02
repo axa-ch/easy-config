@@ -1,6 +1,6 @@
 {
   "name": "@axa-ch/myaxa-config",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Opinionated set of eslint and prettier rules",
   "main": "index.js",
   "scripts": {
@@ -19,7 +19,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/axa-ch/myaxa-config"
+    "url": "https://github.com/axa-ch/myaxa-config"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   },
   "keywords": [
     "eslint",
