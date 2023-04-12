@@ -7,7 +7,8 @@
     "check-format": "prettier --check \"./**/*.js\"",
     "lint": "eslint ./",
     "all-tests": "tape tests/**/*.test.js",
-    "test": "npm run check-format && npm run lint && npm run all-tests"
+    "test": "npm run check-format && npm run lint && npm run all-tests",
+    "prepublishOnly": "npm test"
   },
   "files": [
     "index.js",
@@ -15,8 +16,7 @@
     "eslint",
     "ts-config",
     "stylelint",
-    "LICENSE",
-    "README.md"
+    "LICENSE"
   ],
   "repository": {
     "type": "git",
