@@ -2,6 +2,8 @@
 
 [![Build Status][ci-image]][ci-url]
 [![MIT License][license-image]][license-url]
+[![NPM version][npm-version-image]][npm-url]
+[![NPM downloads][npm-downloads-image]][npm-url]
 
 Modern and strict configuration files to build consistently web applications.
 
@@ -226,3 +228,6 @@ npm version patch && git push --tags
 [ci-url]: https://github.com/axa-ch/easy-config/actions
 [license-image]: http://img.shields.io/badge/license-MIT-000000.svg?style=flat-square
 [license-url]: LICENSE
+[npm-version-image]: https://img.shields.io/npm/v/@axa-ch/easy-config.svg?style=flat-square
+[npm-downloads-image]: https://img.shields.io/npm/dm/@axa-ch/easy-config.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/@axa-ch/easy-config
