@@ -53,6 +53,12 @@
     "typescript": "^3.0.0 || ^4.0.0"
   },
   "author": "AXA (https://axa.ch)",
+  "maintainers": [
+    {
+      "name": "Gianluca Guarini",
+      "email": "gianluca.guarini@axa.ch"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/axa-ch/easy-config/issues"
