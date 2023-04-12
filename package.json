@@ -15,7 +15,8 @@
     "eslint",
     "ts-config",
     "stylelint",
-    "LICENSE"
+    "LICENSE",
+    "README.md"
   ],
   "repository": {
     "type": "git",
