@@ -1,7 +1,7 @@
 {
-  "name": "@axa-ch/myaxa-config",
+  "name": "@axa-ch/easy-config",
   "version": "0.1.0",
-  "description": "Opinionated set of eslint and prettier rules",
+  "description": "Modern and strict configuration files to build consistently web applications.",
   "main": "index.js",
   "scripts": {
     "check-format": "prettier --check \"./**/*.js\"",
@@ -19,10 +19,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/axa-ch/myaxa-config"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "url": "git+https://github.com/axa-ch/easy-config"
   },
   "keywords": [
     "eslint",
@@ -57,9 +54,9 @@
   "author": "AXA (https://axa.ch)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/axa-ch/myaxa-config/issues"
+    "url": "https://github.com/axa-ch/easy-config/issues"
   },
-  "homepage": "https://github.com/axa-ch/myaxa-config#readme",
+  "homepage": "https://github.com/axa-ch/easy-config#readme",
   "devDependencies": {
     "@types/react": "^18.0.9",
     "@typescript-eslint/eslint-plugin": "^5.22.0",
