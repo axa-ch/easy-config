@@ -1,6 +1,6 @@
 {
   "name": "@axa-ch/easy-config",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Modern and strict configuration files to build consistently web applications.",
   "main": "index.js",
   "scripts": {
