@@ -132,7 +132,7 @@ To use the basic easy-config typescript config in your project you can set up yo
 Make sure to have Stylelint installed in your project before proceeding with the following steps
 
 ```shell
-npm i stylelint@15 stylelint-config-standard@30
+npm i stylelint@15 stylelint-config-standard@32
 ```
 
 ### Stylelint Basic Rules Config
@@ -153,7 +153,7 @@ Does your project use SCSS files? No problems... you can enable the easy-config 
 First you need to install the `stylelint-config-standard-scss` dependency
 
 ```shell
-npm i stylelint-config-standard-scss@7
+npm i stylelint-config-standard-scss@8
 ```
 
 You can then update your `.stylelintrc.js` file as follows
