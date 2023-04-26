@@ -29,7 +29,7 @@ npm i -D axa-ch/easy-config
 For Typescript support
 
 ```shell
-npm i -D typescript@4 @typescript-eslint/eslint-plugin@5 @typescript-eslint/parser@5
+npm i -D typescript@5 @typescript-eslint/eslint-plugin@5 @typescript-eslint/parser@5
 ```
 
 These plugins assume a `tsconfig.json` file in your project root ([Docs](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)).
@@ -132,7 +132,7 @@ To use the basic easy-config typescript config in your project you can set up yo
 Make sure to have Stylelint installed in your project before proceeding with the following steps
 
 ```shell
-npm i stylelint@15 stylelint-config-standard@32
+npm i stylelint@15 stylelint-config-standard@33
 ```
 
 ### Stylelint Basic Rules Config
@@ -153,7 +153,7 @@ Does your project use SCSS files? No problems... you can enable the easy-config 
 First you need to install the `stylelint-config-standard-scss` dependency
 
 ```shell
-npm i stylelint-config-standard-scss@8
+npm i stylelint-config-standard-scss@9
 ```
 
 You can then update your `.stylelintrc.js` file as follows
