@@ -22,7 +22,7 @@ npm i -D eslint@8 prettier@2
 # Install the plugins used in easy-config
 npm i -D eslint-config-airbnb-base@15 eslint-plugin-prettier@4 eslint-config-prettier@8 eslint-plugin-import@2
 
-# Install this package directly from github
+# Install this package from npm
 npm i -D axa-ch/easy-config
 ```
 
@@ -112,7 +112,7 @@ module.exports = {
 Make sure to have Typescript installed in your project before proceeding with the following steps
 
 ```shell
-npm i typescript@4
+npm i -D typescript@4
 ```
 
 ### Typescript Basic Config
@@ -132,7 +132,7 @@ To use the basic easy-config typescript config in your project you can set up yo
 Make sure to have Stylelint installed in your project before proceeding with the following steps
 
 ```shell
-npm i stylelint@15 stylelint-config-standard@33
+npm i -D stylelint@15 stylelint-config-standard@33
 ```
 
 ### Stylelint Basic Rules Config
@@ -153,7 +153,7 @@ Does your project use SCSS files? No problems... you can enable the easy-config 
 First you need to install the `stylelint-config-standard-scss` dependency
 
 ```shell
-npm i stylelint-config-standard-scss@9
+npm i -D stylelint-config-standard-scss@9
 ```
 
 You can then update your `.stylelintrc.js` file as follows
@@ -175,7 +175,7 @@ To make sure your classes will be properly named according to [BEM](http://getbe
 First you need to install `stylelint-selector-bem-pattern`
 
 ```shell
-npm i stylelint-selector-bem-pattern@2
+npm i -D stylelint-selector-bem-pattern@2
 ```
 
 You can then update your `.stylelintrc.js` file as follows
@@ -198,7 +198,7 @@ Do you care about the order of your css properties? In that case the easy-config
 First install `stylelint-order`
 
 ```shell
-npm i stylelint-order@6
+npm i -D stylelint-order@6
 ```
 
 Then update your `.stylelintrc.js` file as follows
