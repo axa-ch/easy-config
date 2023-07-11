@@ -6,7 +6,7 @@ module.exports = {
     'no-duplicate-selectors': null,
     'plugin/selector-bem-pattern': {
       implicitComponents: true,
-      componentName: '^[a-z]+(?:-[a-z]+)*(--|__|$)?',
+      componentName: /^[a-z]+(?:-[a-z]+)*(--|__|$)?/,
       componentSelectors(fileName, presetOptions) {
         const WORD = '([a-z]+(-[a-z]+)*)';
         const SCSS_INTERPOLATION = '(.*#{.*}.*)';

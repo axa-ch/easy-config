@@ -14,8 +14,8 @@ test('Prettier CSS config', async (assert) => {
     fs.readFile('tests/fixtures/order-invalid.css'),
   ]);
 
-  const prettierOkOnValidCSS = prettier.check(rawValidCSS.toString(), config);
-  const prettierOkOnInvalidCSS = prettier.check(rawInvalidCSS.toString(), config);
+  const prettierOkOnValidCSS = await prettier.check(rawValidCSS.toString(), config);
+  const prettierOkOnInvalidCSS = await prettier.check(rawInvalidCSS.toString(), config);
   assert.deepEqual([prettierOkOnValidCSS, prettierOkOnInvalidCSS], [true, false], 'Detects unformatted CSS files.');
   assert.end();
 });
