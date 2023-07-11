@@ -17,10 +17,10 @@ Notice that all the `easy-config` peer dependencies should be installed manually
 
 ```shell
 # Install the linting tools
-npm i -D eslint@8 prettier@2
+npm i -D eslint@8 prettier@3
 
 # Install the plugins used in easy-config
-npm i -D eslint-config-airbnb-base@15 eslint-plugin-prettier@4 eslint-config-prettier@8 eslint-plugin-import@2
+npm i -D eslint-config-airbnb-base@15 eslint-plugin-prettier@5 eslint-config-prettier@8 eslint-plugin-import@2
 
 # Install this package from npm
 npm i -D axa-ch/easy-config
@@ -29,7 +29,7 @@ npm i -D axa-ch/easy-config
 For Typescript support
 
 ```shell
-npm i -D typescript@5 @typescript-eslint/eslint-plugin@5 @typescript-eslint/parser@5
+npm i -D typescript@5 @typescript-eslint/eslint-plugin@6 @typescript-eslint/parser@6
 ```
 
 These plugins assume a `tsconfig.json` file in your project root ([Docs](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)).
@@ -112,7 +112,7 @@ module.exports = {
 Make sure to have Typescript installed in your project before proceeding with the following steps
 
 ```shell
-npm i -D typescript@4
+npm i -D typescript@5
 ```
 
 ### Typescript Basic Config
@@ -132,7 +132,7 @@ To use the basic easy-config typescript config in your project you can set up yo
 Make sure to have Stylelint installed in your project before proceeding with the following steps
 
 ```shell
-npm i -D stylelint@15 stylelint-config-standard@33
+npm i -D stylelint@15 stylelint-config-standard@34
 ```
 
 ### Stylelint Basic Rules Config
@@ -153,7 +153,7 @@ Does your project use SCSS files? No problems... you can enable the easy-config 
 First you need to install the `stylelint-config-standard-scss` dependency
 
 ```shell
-npm i -D stylelint-config-standard-scss@9
+npm i -D stylelint-config-standard-scss@10
 ```
 
 You can then update your `.stylelintrc.js` file as follows
@@ -175,7 +175,7 @@ To make sure your classes will be properly named according to [BEM](http://getbe
 First you need to install `stylelint-selector-bem-pattern`
 
 ```shell
-npm i -D stylelint-selector-bem-pattern@2
+npm i -D stylelint-selector-bem-pattern@3
 ```
 
 You can then update your `.stylelintrc.js` file as follows
