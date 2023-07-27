@@ -10,7 +10,6 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'error',
     'react/react-in-jsx-scope': 'off',
     'react/jsx-uses-react': 'error',
-    'import/extensions': 'off',
   },
   settings: {
     react: {
