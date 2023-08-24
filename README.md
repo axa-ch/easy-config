@@ -20,7 +20,7 @@ Notice that all the `easy-config` peer dependencies should be installed manually
 npm i -D eslint@8 prettier@3
 
 # Install the plugins used in easy-config
-npm i -D eslint-config-airbnb-base@15 eslint-plugin-prettier@5 eslint-config-prettier@8 eslint-plugin-import@2
+npm i -D eslint-config-airbnb-base@15 eslint-plugin-prettier@5 eslint-config-prettier@9 eslint-plugin-import@2
 
 # Install this package from npm
 npm i -D axa-ch/easy-config
