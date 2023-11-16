@@ -3,12 +3,14 @@
   "version": "1.2.2",
   "description": "Modern and strict configuration files to build consistently web applications.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "check-format": "prettier --check \"./**/*.js\"",
     "lint": "eslint ./",
     "all-tests": "tape tests/**/*.test.js",
     "test": "npm run check-format && npm run lint && npm run all-tests",
-    "prepublishOnly": "npm test"
+    "prepublishOnly": "npm test && npm run build",
+    "build": "rimraf dist && tsc"
   },
   "files": [
     "index.js",
@@ -47,8 +49,8 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "stylelint": "^15.11.0",
     "stylelint-config-standard": "^30.0.1 || ^31.0.1 || ^32.0.0 || ^33.0.0 || ^34.0.0",
-    "stylelint-order": "^6.0.3",
     "stylelint-config-standard-scss": "^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0",
+    "stylelint-order": "^6.0.3",
     "stylelint-selector-bem-pattern": "^2.0.0 || ^3.0.0",
     "typescript": "^3.0.0 || ^4.0.0 || ^5.0.0"
   },
@@ -69,6 +71,8 @@
   },
   "homepage": "https://github.com/axa-ch/easy-config#readme",
   "devDependencies": {
+    "@types/eslint": "^8.44.7",
+    "@types/node": "^20.9.0",
     "@types/react": "^18.2.21",
     "@typescript-eslint/eslint-plugin": "^6.4.1",
     "@typescript-eslint/parser": "^6.4.1",
@@ -81,12 +85,14 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "prettier": "^3.0.3",
     "react": "^18.2.0",
+    "rimraf": "^5.0.5",
     "stylelint": "^15.10.3",
     "stylelint-config-standard": "^34.0.0",
     "stylelint-config-standard-scss": "^10.0.0",
     "stylelint-order": "^6.0.3",
     "stylelint-selector-bem-pattern": "^3.0.1",
     "tape": "^5.7.2",
-    "typescript": "^5.1.6"
+    "typescript": "^5.2.2",
+    "vitest": "^0.34.6"
   }
 }

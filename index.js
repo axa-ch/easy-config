@@ -1,36 +1,33 @@
-const eslintBase = require.resolve('./eslint/eslint-base');
-const eslintTypescript = require.resolve('./eslint/eslint-typescript');
-const eslintReact = require.resolve('./eslint/eslint-react');
-
-const tsConfigBase = require('./ts-config/base.json');
-
-const prettierBase = require('./prettier/prettier-base');
-
-const stylelintBase = require.resolve('./stylelint/stylelint-base');
-const stylelintScss = require.resolve('./stylelint/stylelint-scss');
-const stylelintBemPattern = require.resolve('./stylelint/stylelint-bem-pattern');
-const stylelintOrder = require.resolve('./stylelint/stylelint-order');
+import eslintBase from "./eslint/eslint-base.js";
+import eslintReact from "./eslint/eslint-react.js";
+import eslintTypescript from "./eslint/eslint-typescript.js";
+import prettierBase from "./prettier/prettier-base.js";
+import stylelintBase from "./stylelint/stylelint-base.js";
+import stylelintScss from "./stylelint/stylelint-scss.js";
+import stylelintBemPattern from "./stylelint/stylelint-bem-pattern.js";
+import stylelintOrder from "./stylelint/stylelint-order.js";
+import tsConfigBase from "./ts-config/base.json";
 
 // Eslint rules
-module.exports.eslint = {
+export const eslint = {
   base: eslintBase,
   react: eslintReact,
   typescript: eslintTypescript,
 };
 
 // Stylelint rules
-module.exports.prettier = {
+export const prettier = {
   base: prettierBase,
 };
 
 // Stylelint rules
-module.exports.stylelint = {
+export const stylelint = {
   base: stylelintBase,
   scss: stylelintScss,
   bemPattern: stylelintBemPattern,
   order: stylelintOrder,
 };
 
-module.exports.tsConfig = {
+export const tsConfig = {
   base: tsConfigBase,
 };

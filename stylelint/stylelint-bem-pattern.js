@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   plugins: ['stylelint-selector-bem-pattern'],
   customSyntax: 'postcss-scss',
   rules: {

@@ -1,3 +1,4 @@
-const { prettier } = require('./index');
+import {prettier} from "./index.js";
 
-module.exports = prettier.base;
+
+export default prettier.base;
