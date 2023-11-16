@@ -1,2 +1,2 @@
-/tests/fixtures/*
-dist
+/dist/**
+/tests/fixtures/**
