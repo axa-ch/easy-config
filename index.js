@@ -2,10 +2,10 @@ import eslintBase from './eslint/eslint-base.js';
 import eslintReact from './eslint/eslint-react.js';
 import eslintTypescript from './eslint/eslint-typescript.js';
 import prettierBase from './prettier/prettier-base.js';
-import stylelintBase from './stylelint/stylelint-base.js';
-import stylelintScss from './stylelint/stylelint-scss.js';
-import stylelintBemPattern from './stylelint/stylelint-bem-pattern.js';
-import stylelintOrder from './stylelint/stylelint-order.js';
+import stylelintBase from './stylelint/stylelint-base.cjs';
+import stylelintScss from './stylelint/stylelint-scss.cjs';
+import stylelintBemPattern from './stylelint/stylelint-bem-pattern.cjs';
+import stylelintOrder from './stylelint/stylelint-order.cjs';
 import tsConfigBase from './ts-config/base.json';
 
 // Eslint rules

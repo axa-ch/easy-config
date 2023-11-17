@@ -1,29 +1,21 @@
-const test = require('tape');
-const { ESLint } = require('eslint');
-
-const api = require('../index');
+import { expect, test } from 'vitest';
+import { FlatESLint } from 'eslint/use-at-your-own-risk';
+import { eslint as eslintConfig } from '../index.js';
+import fs from 'fs';
 
 const isLintResultValid = ({ errorCount, warningCount }) => errorCount === 0 && warningCount === 0;
 
-test('ESLint JS config', async (assert) => {
-  const eslint = new ESLint({
+test('ESLint JS config', async () => {
+  const eslint = new FlatESLint({
+    overrideConfigFile: true,
+    overrideConfig: [...eslintConfig.base, ...eslintConfig.typescript],
     ignore: false,
-    overrideConfig: {
-      extends: [api.eslint.typescript],
-      rules: {
-        'prettier/prettier': ['error', api.prettier.base],
-      },
-    },
   });
-  const [validResult, invalidResult] = await eslint.lintFiles([
-    'tests/fixtures/valid-ts.ts',
-    'tests/fixtures/invalid-ts.ts',
+  const [validResult, invalidResult] = await Promise.all([
+    eslint.lintText(fs.readFileSync('tests/fixtures/valid-ts.ts', 'utf-8')).then((r) => r[0]),
+    eslint.lintText(fs.readFileSync('tests/fixtures/invalid-ts.ts', 'utf-8')).then((r) => r[0]),
   ]);
 
-  assert.deepEqual(
-    [isLintResultValid(validResult), isLintResultValid(invalidResult)],
-    [true, false],
-    'Validates js files against the config.',
-  );
-  assert.end();
+  expect(isLintResultValid(validResult)).toBe(true);
+  expect(isLintResultValid(invalidResult)).toBe(false);
 });

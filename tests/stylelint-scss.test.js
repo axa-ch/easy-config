@@ -1,11 +1,10 @@
-const test = require('tape');
-const stylelint = require('stylelint');
-
-const api = require('../index');
+import stylelint from 'stylelint';
+import { expect, test } from 'vitest';
+import * as api from '../index.js';
 
 const isLintResultValid = ({ errored, warnings }) => errored === false && warnings.length === 0;
 
-test('Stylelint SCSS config', async (assert) => {
+test('Stylelint SCSS config', async () => {
   const { results } = await stylelint.lint({
     config: {
       extends: [api.stylelint.base, api.stylelint.scss],
@@ -13,10 +12,6 @@ test('Stylelint SCSS config', async (assert) => {
     files: ['tests/fixtures/valid.scss', 'tests/fixtures/invalid.scss'],
   });
   const [validResult, invalidResult] = results;
-  assert.deepEqual(
-    [isLintResultValid(validResult), isLintResultValid(invalidResult)],
-    [true, false],
-    'Matches SCSS files.',
-  );
-  assert.end();
+  expect(isLintResultValid(validResult)).toBe(true);
+  expect(isLintResultValid(invalidResult)).toBe(false);
 });

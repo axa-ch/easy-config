@@ -43,34 +43,30 @@ These plugins assume a `tsconfig.json` file in your project root ([Docs](https:/
 
 # Eslint Setup
 
-Set up your eslint config (`.eslintrc.js`) file as follows to enable the `easy-config` eslint rules in your project
+Set up your eslint config (`eslint.config.js`) file as follows to enable the `easy-config` eslint rules in your project
 
 ```js
-const { eslint } = require('@axa-ch/easy-config');
+import { eslint } from '@axa-ch/easy-config';
 
-module.exports = {
-  extends: [eslint.base],
-};
+export default eslint.base;
 ```
 
 To enable Typescript support, simply add the `eslint.typescript` settings to the extension list
 
 ```js
-const { eslint } = require('@axa-ch/easy-config');
+import { eslint } from '@axa-ch/easy-config';
 
-module.exports = {
-  extends: [eslint.base, eslint.typescript],
-};
+export default [...eslint.base, ...eslint.typescript];
 ```
 
 # Prettier Setup
 
-Set up your prettier config (`.prettierrc.js`) file as follows to enable the `easy-config` prettier rules in your project
+Set up your prettier config (`prettier.config.js`) file as follows to enable the `easy-config` prettier rules in your project
 
 ```js
-const { prettier } = require('@axa-ch/easy-config');
+import { prettier } from '@axa-ch/easy-config';
 
-module.exports = prettier.base;
+export default prettier.base
 ```
 
 # React Setup
@@ -88,22 +84,22 @@ npm i -D eslint-plugin-react@7 eslint-plugin-react-hooks@4
 To enable linting for React/JSX files, you should add the following extension to your eslint config (`.eslintrc.js`) file:
 
 ```diff
-const { eslint } = require('@axa-ch/easy-config')
+import { eslint } from '@axa-ch/easy-config'
 
 module.exports = {
--  extends: [eslint.base],
-+  extends: [eslint.base, eslint.react],
+-  extends: eslint.base,
++  extends: [...eslint.base, ...eslint.react],
 }
 ```
 
 You don't need any specific plugins for Typescript support with React, just enable both configs in your `.eslintrc.js`.
 
 ```diff
-const { eslint } = require('@axa-ch/easy-config')
+import { eslint } from '@axa-ch/easy-config'
 
 module.exports = {
--  extends: [eslint.base],
-+  extends: [eslint.base, eslint.react, eslint.typescript],
+-  extends: eslint.base,
++  extends: [...eslint.base, ...eslint.react, ...eslint.typescript],
 }
 ```
 
@@ -137,7 +133,7 @@ npm i -D stylelint@15 stylelint-config-standard@34
 
 ### Stylelint Basic Rules Config
 
-To use only the basic easy-config stylelint rules in your project you can set up your `.stylelintrc.js` file as follows
+To use only the basic easy-config stylelint rules in your project you can set up your `stylelint.config.cjs` file as follows
 
 ```js
 const { stylelint } = require('@axa-ch/easy-config');
@@ -156,7 +152,7 @@ First you need to install the `stylelint-config-standard-scss` dependency
 npm i -D stylelint-config-standard-scss@10
 ```
 
-You can then update your `.stylelintrc.js` file as follows
+You can then update your `stylelint.config.cjs` file as follows
 
 ```diff
 const { stylelint } = require('@axa-ch/easy-config');
@@ -178,7 +174,7 @@ First you need to install `stylelint-selector-bem-pattern`
 npm i -D stylelint-selector-bem-pattern@3
 ```
 
-You can then update your `.stylelintrc.js` file as follows
+You can then update your `stylelint.config.cjs` file as follows
 
 ```diff
 const { stylelint } = require('@axa-ch/easy-config');
@@ -201,7 +197,7 @@ First install `stylelint-order`
 npm i -D stylelint-order@6
 ```
 
-Then update your `.stylelintrc.js` file as follows
+Then update your `stylelint.config.cjs` file as follows
 
 ```diff
 const { stylelint } = require('@axa-ch/easy-config');

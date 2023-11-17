@@ -1,4 +1,4 @@
-import typescriptParser from "@typescript-eslint/parser"
+import typescriptParser from '@typescript-eslint/parser';
 import typescript from '@typescript-eslint/eslint-plugin';
 
 export default [
@@ -7,7 +7,7 @@ export default [
       parser: typescriptParser,
     },
     plugins: {
-      "@typescript-eslint": typescript
+      '@typescript-eslint': typescript,
     },
     rules: {
       '@typescript-eslint/explicit-module-boundary-types': 'off',
@@ -18,5 +18,5 @@ export default [
     rules: {
       '@typescript-eslint/no-var-requires': 'off',
     },
-  }
+  },
 ];

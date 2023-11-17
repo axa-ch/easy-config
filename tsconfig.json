@@ -1,13 +1,12 @@
 {
   "extends": "./ts-config/base.json",
   "exclude": ["node_modules", "tests", "vitest.config.ts"],
-  "include": [
-    "index.js"
-  ],
+  "include": ["index.js"],
   "compilerOptions": {
     "noEmit": false,
     "outDir": "dist",
     "declaration": true,
-    "allowJs": true
+    "allowJs": true,
+    "module": "commonjs"
   }
 }

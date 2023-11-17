@@ -1,11 +1,11 @@
-const test = require('tape');
-const stylelint = require('stylelint');
+import { test, expect } from 'vitest';
+import stylelint from 'stylelint';
 
-const api = require('../index');
+import * as api from '../index.js';
 
 const isLintResultValid = ({ errored, warnings }) => errored === false && warnings.length === 0;
 
-test('Stylelint Order config', async (assert) => {
+test('Stylelint Order config', async () => {
   const { results } = await stylelint.lint({
     config: {
       extends: [api.stylelint.base, api.stylelint.order],
@@ -13,11 +13,8 @@ test('Stylelint Order config', async (assert) => {
     files: ['tests/fixtures/order-valid.css', 'tests/fixtures/order-invalid.css'],
   });
   const [validResult, invalidResult] = results;
+  console.log(invalidResult)
 
-  assert.deepEqual(
-    [isLintResultValid(validResult), isLintResultValid(invalidResult)],
-    [true, true],
-    'Validates CSS property order.',
-  );
-  assert.end();
+  expect(isLintResultValid(validResult)).toBe(true);
+  expect(isLintResultValid(invalidResult)).toBe(false);
 });

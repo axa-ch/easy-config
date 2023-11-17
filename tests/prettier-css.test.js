@@ -1,10 +1,10 @@
-const test = require('tape');
-const fs = require('fs').promises;
-const prettier = require('prettier');
+import fs from 'fs/promises';
+import prettier from 'prettier';
 
-const api = require('../index');
+import * as api from '../index.js';
+import { test, expect } from 'vitest';
 
-test('Prettier CSS config', async (assert) => {
+test('Prettier CSS config', async () => {
   const config = {
     ...api.prettier.base,
     filepath: 'test/fixtures/order-valid.css',
@@ -16,6 +16,6 @@ test('Prettier CSS config', async (assert) => {
 
   const prettierOkOnValidCSS = await prettier.check(rawValidCSS.toString(), config);
   const prettierOkOnInvalidCSS = await prettier.check(rawInvalidCSS.toString(), config);
-  assert.deepEqual([prettierOkOnValidCSS, prettierOkOnInvalidCSS], [true, false], 'Detects unformatted CSS files.');
-  assert.end();
+  expect(prettierOkOnValidCSS).toBe(true);
+  expect(prettierOkOnInvalidCSS).toBe(false);
 });

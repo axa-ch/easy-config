@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   plugins: ['stylelint-order'],
   rules: {
     'order/order': [['dollar-variables', 'declarations', 'rules'], { severity: 'warning' }],

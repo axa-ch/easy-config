@@ -1,10 +1,9 @@
-const test = require('tape');
-const fs = require('fs').promises;
-const prettier = require('prettier');
+import fs from 'fs/promises';
+import prettier from 'prettier';
+import { test, expect } from 'vitest';
+import * as api from '../index.js';
 
-const api = require('../index');
-
-test('Prettier React config', async (assert) => {
+test('Prettier React config', async () => {
   const config = {
     ...api.prettier.base,
     filepath: 'tests/fixtures/react-valid.jsx',
@@ -18,10 +17,6 @@ test('Prettier React config', async (assert) => {
   const prettierOkOnValidReact = await prettier.check(rawValidVue.toString(), config);
   const prettierOkOnInvalidReact = await prettier.check(rawInvalidVue.toString(), config);
 
-  assert.deepEqual(
-    [prettierOkOnValidReact, prettierOkOnInvalidReact],
-    [true, false],
-    'Detects unformatted React components.',
-  );
-  assert.end();
+  expect(prettierOkOnValidReact).toBe(true);
+  expect(prettierOkOnInvalidReact).toBe(false);
 });

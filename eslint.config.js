@@ -1,9 +1,6 @@
 import base from './eslint/eslint-base.js';
-import typescript from './eslint/eslint-typescript.js';
-
 export default [
   ...base,
-  ...typescript,
   {
     rules: {
       'import/no-named-as-default': 'off',

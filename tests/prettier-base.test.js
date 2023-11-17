@@ -1,10 +1,10 @@
-const test = require('tape');
 const fs = require('fs').promises;
-const prettier = require('prettier');
+import prettier from 'prettier';
 
-const api = require('../index');
+import * as api from '../index.js';
+import { expect, test } from 'vitest';
 
-test('Prettier JS config', async (assert) => {
+test('Prettier JS config', async () => {
   const config = {
     ...api.prettier.base,
     filepath: 'test/fixtures/valid-ts.ts',
@@ -17,6 +17,6 @@ test('Prettier JS config', async (assert) => {
 
   const prettierOkOnValidJS = await prettier.check(rawValidJS.toString(), config);
   const prettierOkOnInvalidJS = await prettier.check(rawInvalidJS.toString(), config);
-  assert.deepEqual([prettierOkOnValidJS, prettierOkOnInvalidJS], [true, false], 'Detects unformatted JS files.');
-  assert.end();
+  expect(prettierOkOnValidJS).toBe(true);
+  expect(prettierOkOnInvalidJS).toBe(false);
 });
