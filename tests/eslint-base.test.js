@@ -1,11 +1,11 @@
-const test = require('tape');
+const { test, expect } = await import('vitest');
 const { ESLint } = require('eslint');
 
 const api = require('../index');
 
 const isLintResultValid = ({ errorCount, warningCount }) => errorCount === 0 && warningCount === 0;
 
-test('ESLint JS config', async (assert) => {
+test('ESLint JS config', async () => {
   const eslint = new ESLint({
     ignore: false,
     overrideConfig: {
@@ -17,10 +17,6 @@ test('ESLint JS config', async (assert) => {
   });
   const [validResult, invalidResult] = await eslint.lintFiles(['tests/fixtures/valid.js', 'tests/fixtures/invalid.js']);
 
-  assert.deepEqual(
-    [isLintResultValid(validResult), isLintResultValid(invalidResult)],
-    [true, false],
-    'Validates js files against the config.',
-  );
-  assert.end();
+  expect(isLintResultValid(validResult)).toBe(true);
+  expect(isLintResultValid(invalidResult)).toBe(false);
 });

@@ -1,11 +1,11 @@
-const test = require('tape');
+const { test, expect } = await import('vitest');
 const { ESLint } = require('eslint');
 
 const api = require('../index');
 
 const isLintResultValid = ({ errorCount, warningCount }) => errorCount === 0 && warningCount === 0;
 
-test('ESLint React config', async (assert) => {
+test('ESLint React config', async () => {
   const eslintReact = new ESLint({
     ignore: false,
     overrideConfig: {
@@ -22,10 +22,6 @@ test('ESLint React config', async (assert) => {
     'tests/fixtures/react-invalid.jsx',
   ]);
 
-  assert.deepEqual(
-    [isLintResultValid(validResult), isLintResultValid(invalidResult)],
-    [true, false],
-    'Validates React components against the config.',
-  );
-  assert.end();
+  expect(isLintResultValid(validResult)).toBe(true);
+  expect(isLintResultValid(invalidResult)).toBe(false);
 });
