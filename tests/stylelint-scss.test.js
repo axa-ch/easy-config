@@ -14,5 +14,5 @@ test('Stylelint SCSS config', async () => {
   });
   const [validResult, invalidResult] = results;
   expect(isLintResultValid(validResult)).toBe(true);
-  expect(isLintResultValid(invalidResult)).toBe(false)
+  expect(isLintResultValid(invalidResult)).toBe(false);
 });
