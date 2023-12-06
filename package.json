@@ -6,7 +6,7 @@
   "scripts": {
     "check-format": "prettier --check \"./**/*.js\"",
     "lint": "eslint ./",
-    "all-tests": "tape tests/**/*.test.js",
+    "all-tests": "vitest",
     "test": "npm run check-format && npm run lint && npm run all-tests",
     "prepublishOnly": "npm test"
   },
@@ -47,8 +47,8 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "stylelint": "^15.11.0",
     "stylelint-config-standard": "^30.0.1 || ^31.0.1 || ^32.0.0 || ^33.0.0 || ^34.0.0",
-    "stylelint-order": "^6.0.3",
     "stylelint-config-standard-scss": "^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0",
+    "stylelint-order": "^6.0.3",
     "stylelint-selector-bem-pattern": "^2.0.0 || ^3.0.0",
     "typescript": "^3.0.0 || ^4.0.0 || ^5.0.0"
   },
@@ -86,7 +86,7 @@
     "stylelint-config-standard-scss": "^10.0.0",
     "stylelint-order": "^6.0.3",
     "stylelint-selector-bem-pattern": "^3.0.1",
-    "tape": "^5.7.2",
-    "typescript": "^5.1.6"
+    "typescript": "^5.1.6",
+    "vitest": "^1.0.1"
   }
 }
