@@ -1,8 +1,8 @@
-const { test, expect } = await import('vitest');
-const fs = require('fs').promises;
-const prettier = require('prettier');
+import { test, expect } from 'vitest';
+import fs from 'fs/promises';
+import prettier, { Options } from 'prettier';
 
-const api = require('../index');
+import * as api from '../index';
 
 test('Prettier CSS config', async () => {
   const config = {
@@ -14,8 +14,8 @@ test('Prettier CSS config', async () => {
     fs.readFile('tests/fixtures/order-invalid.css', 'utf-8'),
   ]);
 
-  const prettierOkOnValidCSS = await prettier.check(rawValidCSS, config);
-  const prettierOkOnInvalidCSS = await prettier.check(rawInvalidCSS, config);
+  const prettierOkOnValidCSS = await prettier.check(rawValidCSS, config as Options);
+  const prettierOkOnInvalidCSS = await prettier.check(rawInvalidCSS, config as Options);
 
   expect(prettierOkOnValidCSS).toBe(true);
   expect(prettierOkOnInvalidCSS).toBe(false);
