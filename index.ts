@@ -14,26 +14,33 @@ import stylelintBemPattern from './stylelint/stylelint-bem-pattern';
 import stylelintOrder from './stylelint/stylelint-order.json';
 
 // Eslint rules
-export const eslint = {
+const eslint = {
   base: eslintBase,
   react: eslintReact,
   typescript: eslintTypescript,
 };
 
 // Stylelint rules
-export const prettier = {
+const prettier = {
   base: prettierBase,
 };
 
 // Stylelint rules
-export const stylelint = {
+const stylelint = {
   base: stylelintBase,
   scss: stylelintScss,
   bemPattern: stylelintBemPattern,
   order: stylelintOrder,
 };
 
-export const tsConfig = {
+const tsConfig = {
   base: tsConfigBase,
 };
-// Eslint rules
+
+// using `export =` syntax here to force typescript to emit `module.exports = `
+export = {
+  eslint,
+  prettier,
+  stylelint,
+  tsConfig
+}
