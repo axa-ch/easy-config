@@ -14,7 +14,7 @@
     "lint": "eslint ./",
     "all-tests": "npm run build && vitest",
     "test": "npm run check-format && npm run lint && npm run all-tests",
-    "prepublishOnly": "npm test",
+
     "build": "rimraf dist && tsc"
   },
   "files": [
@@ -23,7 +23,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/axa-ch/easy-config"
+    "url": "git+https://github.com/axa-ch/easy-config.git"
   },
   "keywords": [
     "eslint",
