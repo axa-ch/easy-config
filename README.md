@@ -70,7 +70,7 @@ Set up your prettier config (`prettier.config.js`) file as follows to enable the
 ```js
 import { prettier } from '@axa-ch/easy-config';
 
-module.exports = prettier.base;
+export default prettier.base;
 ```
 
 # React Setup
