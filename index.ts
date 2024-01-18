@@ -1,18 +1,18 @@
-import eslintBase from './eslint/eslint-base.json' assert {type: 'json'};
-import eslintTypescript from './eslint/eslint-typescript.json' assert {type: 'json'};
-import eslintReact from './eslint/eslint-react.json' assert {type: 'json'};
-import tsConfigBase from './ts-config/base.json' assert {type: 'json'};
-import prettierBase from './prettier/prettier-base.json' assert {type: 'json'};
-import stylelintBase from './stylelint/stylelint-base.json' assert {type: 'json'};
-import stylelintScss from './stylelint/stylelint-scss.json' assert {type: 'json'};
-import stylelintOrder from './stylelint/stylelint-order.json' assert {type: 'json'};
-import stylelintBemPattern from './stylelint/stylelint-bem-pattern';
+import { makeBase } from './eslint/eslint-base.js';
+import { makeTypescript } from './eslint/eslint-typescript.js';
+import { makeReact } from './eslint/eslint-react.js';
+import tsConfigBase from './ts-config/base.json' assert { type: 'json' };
+import prettierBase from './prettier/prettier-base.json' assert { type: 'json' };
+import stylelintBase from './stylelint/stylelint-base.json' assert { type: 'json' };
+import stylelintScss from './stylelint/stylelint-scss.json' assert { type: 'json' };
+import stylelintOrder from './stylelint/stylelint-order.json' assert { type: 'json' };
+import stylelintBemPattern from './stylelint/stylelint-bem-pattern.js';
 
 // Eslint rules
 const eslint = {
-  base: eslintBase,
-  react: eslintReact,
-  typescript: eslintTypescript,
+  makeBase,
+  makeTypescript,
+  makeReact,
 };
 
 // Stylelint rules
