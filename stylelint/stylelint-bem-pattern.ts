@@ -1,4 +1,4 @@
-export = {
+export default {
   plugins: ['stylelint-selector-bem-pattern'],
   customSyntax: 'postcss-scss',
   rules: {
@@ -7,7 +7,7 @@ export = {
     'plugin/selector-bem-pattern': {
       implicitComponents: true,
       componentName: /^[a-z]+(?:-[a-z]+)*(--|__|$)?/,
-      componentSelectors(fileName: string, presetOptions: {namespace: string}) {
+      componentSelectors(fileName: string, presetOptions: { namespace: string }) {
         const WORD = '([a-z]+(-[a-z]+)*)';
         const SCSS_INTERPOLATION = '(.*#{.*}.*)';
 

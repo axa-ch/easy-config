@@ -4,7 +4,7 @@ import { ESLint } from 'eslint';
 import * as api from '../index';
 import { isEsLintResultValid, testRequire } from './helper.js';
 
-const eslintTypescript = testRequire.resolve("../eslint/eslint-typescript.json");
+const eslintTypescript = testRequire.resolve('../eslint/eslint-typescript.json');
 
 test('ESLint JS config', async () => {
   const eslint = new ESLint({

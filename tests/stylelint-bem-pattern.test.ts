@@ -3,8 +3,8 @@ import stylelint from 'stylelint';
 
 import { isStyleLintValid, testRequire } from './helper.js';
 
-const stylelintBase = testRequire.resolve("../stylelint/stylelint-base");
-const stylelintScss = testRequire.resolve("../stylelint/stylelint-scss");
+const stylelintBase = testRequire.resolve('../stylelint/stylelint-base');
+const stylelintScss = testRequire.resolve('../stylelint/stylelint-scss');
 
 // we need to have a compiled version of this rule
 const bemPattern = testRequire.resolve('../dist/stylelint/stylelint-bem-pattern');

@@ -1,10 +1,10 @@
 import { test, expect } from 'vitest';
 import { ESLint } from 'eslint';
 
-import * as api from "../index";
+import * as api from '../index';
 import { isEsLintResultValid, testRequire } from './helper.js';
-const eslintReactConfig = testRequire.resolve("../eslint/eslint-react.json");
-const eslintTypescript = testRequire.resolve("../eslint/eslint-typescript.json");
+const eslintReactConfig = testRequire.resolve('../eslint/eslint-react.json');
+const eslintTypescript = testRequire.resolve('../eslint/eslint-typescript.json');
 
 test('ESLint Typescript React config', async () => {
   const eslint = new ESLint({

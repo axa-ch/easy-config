@@ -1,11 +1,11 @@
 {
   "extends": "./ts-config/base.json",
-  "exclude": ["node_modules", "tests"],
+  "include": ["index.ts", "eslint/*", "prettier/*", "stylelint/*", "ts-config/*"],
   "compilerOptions": {
     "noEmit": false,
     "outDir": "dist",
     "declaration": true,
     "allowJs": true,
-    "module": "commonjs",
-  }
+    "target": "ESNext",
+  },
 }

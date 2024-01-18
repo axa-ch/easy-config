@@ -43,7 +43,7 @@ These plugins assume a `tsconfig.json` file in your project root ([Docs](https:/
 
 # Eslint Setup
 
-Set up your eslint config (`.eslintrc.js`) file as follows to enable the `easy-config` eslint rules in your project
+Set up your eslint config (`eslint.config.js`) file as follows to enable the `easy-config` eslint rules in your project
 
 ```js
 const { eslint } = require('@axa-ch/easy-config');
@@ -65,10 +65,10 @@ module.exports = {
 
 # Prettier Setup
 
-Set up your prettier config (`.prettierrc.js`) file as follows to enable the `easy-config` prettier rules in your project
+Set up your prettier config (`prettier.config.js`) file as follows to enable the `easy-config` prettier rules in your project
 
 ```js
-const { prettier } = require('@axa-ch/easy-config');
+import { prettier } from '@axa-ch/easy-config';
 
 module.exports = prettier.base;
 ```
@@ -85,7 +85,7 @@ npm i -D eslint-plugin-react@7 eslint-plugin-react-hooks@4
 
 ## Eslint Setup
 
-To enable linting for React/JSX files, you should add the following extension to your eslint config (`.eslintrc.js`) file:
+To enable linting for React/JSX files, you should add the following extension to your eslint config (`eslint.config.js`) file:
 
 ```diff
 const { eslint } = require('@axa-ch/easy-config')
@@ -96,7 +96,7 @@ module.exports = {
 }
 ```
 
-You don't need any specific plugins for Typescript support with React, just enable both configs in your `.eslintrc.js`.
+You don't need any specific plugins for Typescript support with React, just enable both configs in your `eslint.config.js`.
 
 ```diff
 const { eslint } = require('@axa-ch/easy-config')

@@ -1,11 +1,9 @@
-import { expect, test } from "vitest";
-import stylelint from "stylelint";
+import { expect, test } from 'vitest';
+import stylelint from 'stylelint';
 import { isStyleLintValid, testRequire } from './helper.js';
 
-const stylelintBase = testRequire.resolve("../stylelint/stylelint-base");
-const stylelintOrder = testRequire.resolve("../stylelint/stylelint-order");
-
-
+const stylelintBase = testRequire.resolve('../stylelint/stylelint-base');
+const stylelintOrder = testRequire.resolve('../stylelint/stylelint-order');
 
 test('Stylelint Order config', async () => {
   const { results } = await stylelint.lint({

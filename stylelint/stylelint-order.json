@@ -1,21 +1,23 @@
-{  "plugins": ["stylelint-order"],
+{
+  "plugins": ["stylelint-order"],
   "rules": {
     "order/order": [["dollar-variables", "declarations", "rules"], { "severity": "warning" }],
     "order/properties-order": [
       [
-        { "order": "strict", "properties": ["content", "pointer-events", "z-index", "order"]
-        },
+        { "order": "strict", "properties": ["content", "pointer-events", "z-index", "order"] },
         "position",
-        { "order": "flexible", "properties": ["top", "right", "bottom", "left"]
-        },
+        { "order": "flexible", "properties": ["top", "right", "bottom", "left"] },
         "display",
-        { "order": "flexible", "properties": ["align-content", "align-items", "align-self", "flex", "justify-content"]
+        {
+          "order": "flexible",
+          "properties": ["align-content", "align-items", "align-self", "flex", "justify-content"]
         },
-        { "order": "flexible", "properties": ["width", "max-width", "min-width", "height", "max-height", "min-height", "margin", "padding"]
+        {
+          "order": "flexible",
+          "properties": ["width", "max-width", "min-width", "height", "max-height", "min-height", "margin", "padding"]
         }
       ],
-      { "severity": "warning"
-      }
+      { "severity": "warning" }
     ]
   }
 }
