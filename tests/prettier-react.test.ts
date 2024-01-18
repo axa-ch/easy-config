@@ -1,8 +1,8 @@
-const { test, expect } = await import('vitest');
-const fs = require('fs').promises;
-const prettier = require('prettier');
+import { test, expect } from 'vitest';
+import fs from 'fs/promises';
+import prettier, { Options } from 'prettier';
 
-const api = require('../index');
+import * as api from '../index';
 
 test('Prettier React config', async () => {
   const config = {
@@ -15,8 +15,8 @@ test('Prettier React config', async () => {
     fs.readFile('tests/fixtures/react-invalid.jsx', 'utf-8'),
   ]);
 
-  const prettierOkOnValidReact = await prettier.check(rawValidVue, config);
-  const prettierOkOnInvalidReact = await prettier.check(rawInvalidVue, config);
+  const prettierOkOnValidReact = await prettier.check(rawValidVue, config as Options);
+  const prettierOkOnInvalidReact = await prettier.check(rawInvalidVue, config as Options);
 
   expect(prettierOkOnValidReact).toBe(true);
   expect(prettierOkOnInvalidReact).toBe(false);

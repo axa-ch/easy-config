@@ -1,0 +1,8 @@
+{
+  "extends": ["stylelint-config-standard-scss"],
+  "rules": {
+    "selector-class-pattern": null,
+    "no-duplicate-selectors": null,
+    "scss/at-import-no-partial-leading-underscore": null
+  }
+}
