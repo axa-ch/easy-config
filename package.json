@@ -6,7 +6,7 @@
   "scripts": {
     "check-format": "prettier --check \"./**/*.js\"",
     "lint": "eslint ./",
-    "all-tests": "vitest",
+    "all-tests": "vitest run",
     "test": "npm run check-format && npm run lint && npm run all-tests",
     "prepublishOnly": "npm test"
   },
