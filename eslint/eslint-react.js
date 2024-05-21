@@ -1,22 +1,9 @@
-import { makeCompat } from './setup-compat.js';
-
-export const makeReact = (dirname) =>
-  makeCompat(dirname).config({
-    extends: ['plugin:react/recommended'],
-    plugins: ['react-hooks'],
-    rules: {
-      'react/prop-types': 'off',
-      'react/display-name': 'off',
-      'react/jsx-uses-vars': 'error',
-      'react/jsx-no-undef': 'error',
-      'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'error',
-      'react/react-in-jsx-scope': 'off',
-      'react/jsx-uses-react': 'error',
+export const react = (reactRecommended, globals) => ({
+  ...reactRecommended,
+  languageOptions: {
+    ...reactRecommended.languageOptions,
+    globals: {
+      ...globals.browser,
     },
-    settings: {
-      react: {
-        version: 'detect',
-      },
-    },
-  });
+  },
+});
