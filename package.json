@@ -10,7 +10,7 @@
     "test": "npm run lint && npm run all-tests",
     "prepublishOnly": "npm test"
   },
-  "files": ["index.js", "prettier", "eslint", "ts-config", "stylelint", "LICENSE"],
+  "files": ["index.js", "biome", "ts-config", "stylelint", "LICENSE"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/axa-ch/easy-config"

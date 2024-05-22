@@ -1,5 +1,5 @@
-const { stylelint } = require('./');
+import { stylelint } from './index.js';
 
-module.exports = {
+export default {
   extends: [stylelint.base, stylelint.scss, stylelint.bemPattern, stylelint.order],
 };
