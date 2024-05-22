@@ -1,7 +1,6 @@
-const { test, expect } = await import('vitest');
-const stylelint = require('stylelint');
-
-const api = require('../index');
+import { test, expect } from 'vitest';
+import stylelint from 'stylelint';
+import * as api from '../index';
 
 const isLintResultValid = ({ errored, warnings }) => errored === false && warnings.length === 0;
 
