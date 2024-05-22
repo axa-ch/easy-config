@@ -11,7 +11,7 @@ module.exports = {
         const WORD = '([a-z]+(-[a-z]+)*)';
         const SCSS_INTERPOLATION = '(.*#{.*}.*)';
 
-        const ns = presetOptions && presetOptions.namespace ? `${presetOptions.namespace}-` : '';
+        const ns = presetOptions?.namespace ? `${presetOptions.namespace}-` : '';
 
         const block = fileName.match(/^([a-z]+(-[a-z]+)*)+?/g);
         const element = `(?:__${WORD})?`;
