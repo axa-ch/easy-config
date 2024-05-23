@@ -10,15 +10,16 @@ Modern and strict configuration files to build consistently web applications.
 # Table of content
 
 1. [Getting Started](#getting-started)
-    1. [Installation](#biome-installation)
-    2. [Configuration](#biome-configuration)
-    3. [IDE Integration](#biome-integration)
+   1. [Installation](#biome-installation)
+   2. [Configuration](#biome-configuration)
+   3. [IDE Integration](#biome-integration)
 2. [Typescript Setup](#typescript-setup)
 3. [Stylelint Setup](#stylelint-setup)
-    1. [SCSS Setup](#stylelint-scss)
-    2. [CSS Order Setup](#stylelint-order)
+   1. [SCSS Setup](#stylelint-scss)
+   2. [CSS Order Setup](#stylelint-order)
 
 <a id='getting-started'></a>
+
 # Getting started
 
 ## Installation
@@ -31,15 +32,14 @@ npm i -D --save-exact @biomejs/biome @axa-ch/easy-config prettier
 ```
 
 <a id='biome-configuration'></a>
+
 ## Configuration
 
 Create a `biome.json` file at the root of your project
 
 ```json5
 {
-  extends: [
-    './node_modules/@axa-ch/easy-config/biome/base.json'
-  ],
+  extends: ['./node_modules/@axa-ch/easy-config/biome/base.json'],
   // Other config...
 }
 ```
@@ -56,6 +56,7 @@ export default prettier.base;
 ```
 
 <a id='biome-integration'></a>
+
 ## IDE Integration
 
 Biome provides plugins for the most common IDEs:
@@ -89,9 +90,7 @@ Then, create a `tsconfig.json` file and extend `@axa-ch/easy-config`:
 
 ```json5
 {
-  extends: [
-    '@axa-ch/easy-config/ts-config/base'
-  ],
+  extends: ['@axa-ch/easy-config/ts-config/base'],
   // Other config...
 }
 ```
@@ -162,15 +161,9 @@ export default {
 ```
 
 [ci-image]: https://img.shields.io/github/actions/workflow/status/axa-ch/easy-config/ci.yml?style=flat-square&branch=main
-
 [ci-url]: https://github.com/axa-ch/easy-config/actions
-
 [license-image]: http://img.shields.io/badge/license-MIT-000000.svg?style=flat-square
-
 [license-url]: LICENSE
-
 [npm-version-image]: https://img.shields.io/npm/v/@axa-ch/easy-config.svg?style=flat-square
-
 [npm-downloads-image]: https://img.shields.io/npm/dm/@axa-ch/easy-config.svg?style=flat-square
-
 [npm-url]: https://npmjs.org/package/@axa-ch/easy-config
