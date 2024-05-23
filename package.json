@@ -15,6 +15,8 @@
     "biome",
     "ts-config",
     "stylelint",
+    "prettier",
+    "README.md",
     "LICENSE"
   ],
   "repository": {
