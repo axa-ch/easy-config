@@ -10,14 +10,28 @@
     "test": "npm run lint && npm run all-tests",
     "prepublishOnly": "npm test"
   },
-  "files": ["index.js", "biome", "ts-config", "stylelint", "LICENSE"],
+  "files": [
+    "index.js",
+    "biome",
+    "ts-config",
+    "stylelint",
+    "LICENSE"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/axa-ch/easy-config"
   },
-  "keywords": ["biome", "stylelint", "lint", "format", "config", "axa"],
+  "keywords": [
+    "biome",
+    "stylelint",
+    "lint",
+    "format",
+    "config",
+    "axa"
+  ],
   "peerDependencies": {
-    "@biomejs/biome": "^1.7.3"
+    "@biomejs/biome": "^1.7.3",
+    "prettier": "^3.2.5"
   },
   "optionalDependencies": {
     "stylelint": "^16.5.0",
@@ -45,6 +59,7 @@
   "devDependencies": {
     "@biomejs/biome": "^1.7.3",
     "@types/react": "^18.2.21",
+    "prettier": "3.2.5",
     "react": "^18.2.0",
     "stylelint": "^16.2.1",
     "stylelint-config-standard": "^36.0.0",
