@@ -6,7 +6,11 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true
+      "recommended": true,
+      "a11y": {
+        "useKeyWithClickEvents": "off",
+        "useKeyWithMouseEvents": "off"
+      }
     }
   },
   "formatter": {
@@ -32,5 +36,10 @@
       "attributePosition": "multiline",
       "jsxQuoteStyle": "single"
     }
+  },
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
   }
 }
