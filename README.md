@@ -7,222 +7,127 @@
 
 Modern and strict configuration files to build consistently web applications.
 
-# Installation
+# Table of content
+1. [Getting Started](#getting-started)
+   1. [Installation](#biome-installation)
+   2. [Configuration](#biome-configuration)
+   3. [IDE Integration](#biome-integration)
+2. [Typescript Setup](#typescript-setup)
+3. [Stylelint Setup](#stylelint-setup)
+   1. [SCSS Setup]()
+   2. [CSS Order Setup]()
+   3. [BEM Pattern Setup]()
 
-```shell
-npm i @axa-ch/easy-config
-```
-
-Notice that all the `easy-config` peer dependencies should be installed manually. For this reason we need to explicitly define their major version.
-
-```shell
-# Install the linting tools
-npm i -D eslint@8 prettier@3
-
-# Install the plugins used in easy-config
-npm i -D eslint-config-airbnb-base@15 eslint-plugin-prettier@5 eslint-config-prettier@9 eslint-plugin-import@2
-
-# Install this package from npm
-npm i -D axa-ch/easy-config
-```
-
-For Typescript support
-
-```shell
-npm i -D typescript@5 @typescript-eslint/eslint-plugin@6 @typescript-eslint/parser@6
-```
-
-These plugins assume a `tsconfig.json` file in your project root ([Docs](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)).
-<br/>
-[See also our typescript setup](https://github.com/axa-ch/easy-config#typescript-setup)
-
-## Optional IDE Configuration
-
-- Install eslint in [your IDE](https://eslint.org/docs/user-guide/integrations)
-- Install prettier in [your IDE](https://prettier.io/docs/en/editors.html)
-
-# Eslint Setup
-
-Set up your eslint config (`.eslintrc.js`) file as follows to enable the `easy-config` eslint rules in your project
-
-```js
-const { eslint } = require('@axa-ch/easy-config');
-
-module.exports = {
-  extends: [eslint.base],
-};
-```
-
-To enable Typescript support, simply add the `eslint.typescript` settings to the extension list
-
-```js
-const { eslint } = require('@axa-ch/easy-config');
-
-module.exports = {
-  extends: [eslint.base, eslint.typescript],
-};
-```
-
-# Prettier Setup
-
-Set up your prettier config (`.prettierrc.js`) file as follows to enable the `easy-config` prettier rules in your project
-
-```js
-const { prettier } = require('@axa-ch/easy-config');
-
-module.exports = prettier.base;
-```
-
-# React Setup
+<a id='getting-started'></a>
+# Getting started
 
 ## Installation
-
-For React projects we need to install the following two dependencies:
-
+<a name='biome-installation'></a>
+Start by installing [BiomeJS](https://biomejs.dev/) and `@axa-ch/easy-config`.
 ```shell
-npm i -D eslint-plugin-react@7 eslint-plugin-react-hooks@4
+npm i -D --save-exact @biomejs/biome @axa-ch/easy-config
 ```
+<a id='biome-configuration'></a>
+## Configuration
+Create a `biome.json` file at the root of your project
 
-## Eslint Setup
-
-To enable linting for React/JSX files, you should add the following extension to your eslint config (`.eslintrc.js`) file:
-
-```diff
-const { eslint } = require('@axa-ch/easy-config')
-
-module.exports = {
--  extends: [eslint.base],
-+  extends: [eslint.base, eslint.react],
-}
-```
-
-You don't need any specific plugins for Typescript support with React, just enable both configs in your `.eslintrc.js`.
-
-```diff
-const { eslint } = require('@axa-ch/easy-config')
-
-module.exports = {
--  extends: [eslint.base],
-+  extends: [eslint.base, eslint.react, eslint.typescript],
-}
-```
-
-# Typescript Setup
-
-Make sure to have Typescript installed in your project before proceeding with the following steps
-
-```shell
-npm i -D typescript@5
-```
-
-### Typescript Basic Config
-
-To use the basic easy-config typescript config in your project you can set up your `.tsconfig.json` file as follows
-
-```json
+```json5
 {
-  "extends": "@axa-ch/easy-config/ts-config/base"
+  "extends": ["./node_modules/@axa-ch/easy-config/biome/base.json"],
+  // Other config...
+}
+```
+You can configure this to your liking. [Follow the Configuration guide from biome](https://biomejs.dev/reference/configuration/)
+
+<a id='biome-integration'></a>
+## IDE Integration
+Biome provides plugins for the most common IDEs:  
+* IntelliJ-based products: [Biome](https://plugins.jetbrains.com/plugin/22761-biome)  
+* VSCode Extension: [Biome](https://marketplace.visualstudio.com/items?itemName=biomejs.biome) 
+
+<a id='typescript-setup'></a>
+# Typescript setup
+Start by installing typescript:
+```shell
+npm i -D --save-exact typescript
+```
+Then, create a `tsconfig.json` file and extend `@axa-ch/easy-config`:
+
+```json5
+{
+  "extends": ["@axa-ch/easy-config/ts-config/base"],
+  // Other config...
+}
+```
+<a id='stylelint-setup'></a>
+# Stylelint setup
+Start by installing stylelint and the rules used by easy-config:
+```shell
+npm i -D --save-exact stylelint stylelint-config-standard
+```
+Extend easy-config in the `.stylelintrc.js` file:
+```js
+import {stylelint} from '@axa-ch/easy-config';
+
+/** @type {import('stylelint').Config} */
+export default {
+  extends: [stylelint.base]
+}
+
+```
+## SCSS Setup
+To use Stylelint with [SASS](https://sass-lang.com/), start by installing the SCSS default config for stylelint:
+```shell
+npm i -D --save-exact stylelint-config-standard-scss
+```
+Extend your stylelint configuration like shown below:
+```js
+import {stylelint} from '@axa-ch/easy-config';
+
+/** @type {import('stylelint').Config} */
+export default {
+  extends: [stylelint.base, stylelint.scss]
 }
 ```
 
-# Stylelint Setup
+## CSS Order Setup
+You can install this extension if you want to ensure that CSS Properties are defined in a consistent way.
 
-## Stylelint Installation
-
-Make sure to have Stylelint installed in your project before proceeding with the following steps
-
+Start by installing the extension:
 ```shell
-npm i -D stylelint@15 stylelint-config-standard@36
+npm i -D --save-exact stylelint-order
 ```
-
-### Stylelint Basic Rules Config
-
-To use only the basic easy-config stylelint rules in your project you can set up your `.stylelintrc.js` file as follows
-
+Extend your stylelint configuration like shown below:
 ```js
-const { stylelint } = require('@axa-ch/easy-config');
+import {stylelint} from '@axa-ch/easy-config';
 
-module.exports = {
-  extends: [stylelint.base],
-};
+/** @type {import('stylelint').Config} */
+export default {
+  extends: [stylelint.base, stylelint.order]
+}
 ```
 
-### Stylelint SCSS Config
+## CSS BEM Pattern
+> [!WARNING]
+> This extension is not working currently. It may be removed at any time
 
-Does your project use SCSS files? No problems... you can enable the easy-config stylelint rules for scss.
-First you need to install the `stylelint-config-standard-scss` dependency
+If you utilize the [BEM Pattern](https://getbem.com/) in your code, we would recommend using
+this extension to check for incorrect usage of the BEM Pattern.
 
+Start by installing this package:
 ```shell
-npm i -D stylelint-config-standard-scss@13
+npm i -D --save-exact stylelint-selector-bem-pattern
 ```
 
-You can then update your `.stylelintrc.js` file as follows
+Extend your stylelint configuration like this:
+```js
+import {stylelint} from '@axa-ch/easy-config';
 
-```diff
-const { stylelint } = require('@axa-ch/easy-config');
-
-module.exports = {
-  extends: [
-    stylelint.base,
-+   stylelint.scss,
-  ],
-};
+/** @type {import('stylelint').Config} */
+export default {
+  extends: [stylelint.base, stylelint.bemPattern]
+}
 ```
-
-### Stylelint BEM Patterns Config
-
-To make sure your classes will be properly named according to [BEM](http://getbem.com/), you might enable the easy-config bem pattern plugin.
-First you need to install `stylelint-selector-bem-pattern`
-
-```shell
-npm i -D stylelint-selector-bem-pattern@4
-```
-
-You can then update your `.stylelintrc.js` file as follows
-
-```diff
-const { stylelint } = require('@axa-ch/easy-config');
-
-module.exports = {
-  extends: [
-    stylelint.base,
-    stylelint.scss,
-+   stylelint.bemPattern,
-  ],
-};
-```
-
-### Stylelint Order Config
-
-Do you care about the order of your css properties? In that case the easy-config `stylelint/config-order` is what you are looking for.
-First install `stylelint-order`
-
-```shell
-npm i -D stylelint-order@6
-```
-
-Then update your `.stylelintrc.js` file as follows
-
-```diff
-const { stylelint } = require('@axa-ch/easy-config');
-
-module.exports = {
-  extends: [
-    stylelint.base,
-    stylelint.scss,
-    stylelint.bemPattern,
-+   stylelint.order,
-  ],
-};
-```
-
-### Release new Version of easy-config
-
-```shell
-npm version patch && git push --tags
-```
-
-[If you want to release a specific version of this package read the docs.](https://docs.npmjs.com/cli/v8/commands/npm-version)
 
 [ci-image]: https://img.shields.io/github/actions/workflow/status/axa-ch/easy-config/ci.yml?style=flat-square&branch=main
 [ci-url]: https://github.com/axa-ch/easy-config/actions
