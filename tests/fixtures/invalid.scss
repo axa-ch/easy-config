@@ -1,10 +1,10 @@
 @mixin bar {
-    color: blue;
+  color: blue;
 }
 
 .foo {
   position: relative;
-    @include bar;
-  
-    @foobar bar;
+  @include bar;
+
+  @foobar bar;
 }

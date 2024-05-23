@@ -14,7 +14,7 @@
     }
   },
   "formatter": {
-    "enabled": true,
+    "enabled": false,
     "formatWithErrors": false,
     "ignore": [],
     "attributePosition": "auto",
