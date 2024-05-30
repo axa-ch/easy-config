@@ -37,10 +37,11 @@ npm i -D --save-exact @biomejs/biome @axa-ch/easy-config prettier
 
 Create a `biome.json` file at the root of your project
 
-```json5
+```json
 {
-  extends: ['./node_modules/@axa-ch/easy-config/biome/base.json'],
-  // Other config...
+  "$schema": "https://biomejs.dev/schemas/1.7.0/schema.json",
+  "extends": ["./node_modules/@axa-ch/easy-config/biome/base.json"]
+ 
 }
 ```
 
@@ -88,10 +89,9 @@ npm i -D --save-exact typescript
 
 Then, create a `tsconfig.json` file and extend `@axa-ch/easy-config`:
 
-```json5
+```json
 {
-  extends: ['@axa-ch/easy-config/ts-config/base'],
-  // Other config...
+  "extends": ["@axa-ch/easy-config/ts-config/base"]
 }
 ```
 
