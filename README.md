@@ -50,10 +50,18 @@ liking. [Follow the Configuration guide from biome](https://biomejs.dev/referenc
 To configure prettier, add a `.prettierrc.js` file with the following content:
 
 ```js
-import { prettier } from './index.js';
+import { prettier } from '@axa-ch/easy-config';
 
 export default prettier.base;
 ```
+
+### Why not use `biome format`?
+
+Biomes [formatting support](https://biomejs.dev/internals/language-support/) is currently not developed enough for us to
+make the full move over to biome.
+For instance, Biome currently doesn't support [CSS Formatting](https://github.com/biomejs/biome/issues/1285) or
+Markdown.
+Furthermore, Biome doesn't plan to support SCSS in the foreseeing future, so it makes sense to stick to prettier.
 
 <a id='biome-integration'></a>
 
