@@ -9,7 +9,8 @@
       "recommended": true,
       "a11y": {
         "useKeyWithClickEvents": "off",
-        "useKeyWithMouseEvents": "off"
+        "useKeyWithMouseEvents": "off",
+        "noNoninteractiveTabindex": "off"
       }
     }
   },
