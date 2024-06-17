@@ -32,8 +32,8 @@
     "axa"
   ],
   "peerDependencies": {
-    "@biomejs/biome": "^1.7.3",
-    "prettier": "^3.2.5"
+    "@biomejs/biome": "^1.8.1",
+    "prettier": "^3.3.2"
   },
   "optionalDependencies": {
     "stylelint": "^16.5.0",
@@ -59,13 +59,13 @@
   },
   "homepage": "https://github.com/axa-ch/easy-config#readme",
   "devDependencies": {
-    "@biomejs/biome": "^1.7.3",
-    "prettier": "3.2.5",
-    "stylelint": "^16.2.1",
+    "@biomejs/biome": "^1.8.1",
+    "prettier": "3.3.2",
+    "stylelint": "^16.6.1",
     "stylelint-config-standard": "^36.0.0",
-    "stylelint-config-standard-scss": "^13.0.0",
+    "stylelint-config-standard-scss": "^13.1.0",
     "stylelint-order": "^6.0.4",
-    "typescript": "^5.3.3",
+    "typescript": "^5.4.5",
     "vitest": "^1.6.0"
   }
 }

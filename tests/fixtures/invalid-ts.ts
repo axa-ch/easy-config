@@ -1,4 +1,6 @@
-export const fn = (foo: string) => {
-  const bar = { foo: 0 };
-  return bar;
-};
+import { FC } from 'react';
+
+// test for noExplicitAny
+type Test = any;
+
+type ReactFC = FC;
