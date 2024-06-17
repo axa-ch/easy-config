@@ -11,6 +11,12 @@
         "useKeyWithClickEvents": "off",
         "useKeyWithMouseEvents": "off",
         "noNoninteractiveTabindex": "off"
+      },
+      "suspicious": {
+        "noArrayIndexKey": "off"
+      },
+      "nursery": {
+        "noUnusedFunctionParameters": "error"
       }
     }
   },
