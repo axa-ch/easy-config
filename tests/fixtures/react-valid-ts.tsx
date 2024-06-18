@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import { type FC, useState } from 'react';
 
 export const Component: FC = ({ children }: { children: string }) => {
   const [count, setCount] = useState<number>(0);

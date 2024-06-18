@@ -1,4 +1,4 @@
-import { useState, FC } from 'react';
+import { useState, type FC } from 'react';
 
 // @ts-ignore
 export const Component: FC = ({ children }) => {
@@ -13,6 +13,13 @@ export const Component: FC = ({ children }) => {
       onClick={() => setCount((v) => v + 1)}
     >
       {count}
+      <p>This should fail</p>
+      <img
+        src={'test.png'}
+        alt={'picture of test'}
+      />
+      <div></div>
+      <button>No button type</button>
       <br />
       {children}
     </h1>
