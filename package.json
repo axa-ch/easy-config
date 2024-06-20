@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "check-formatting": "prettier --check .",
-    "test": "vitest run",
+    "test": "vitest run & npm run lint",
     "lint": "biome check .",
     "prepublishOnly": "npm test"
   },
