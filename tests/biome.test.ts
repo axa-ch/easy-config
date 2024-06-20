@@ -1,14 +1,15 @@
-import { execSync } from 'node:child_process';
+import { execa } from 'execa';
 import { expect, test } from 'vitest';
 
 const RULE_REGEX = /(?<line>\d+?):\d+? (?<rule>[/A-z0-9]+)/gs;
 
-const runTest = (file: string): Array<{ lineNumber: string; rule: string }> => {
+const runTest = async (file: string): Array<{ lineNumber: string; rule: string }> => {
   try {
-    execSync(`npx biome check --config-path ./tests/biome.test.json ./tests/fixtures/${file}`, {
-      encoding: 'utf-8',
+    await execa({
       stdio: 'pipe',
-    });
+      encoding: 'utf8',
+      preferLocal: true,
+    })`biome check --config-path ./tests/biome.test.json ./tests/fixtures/${file}`;
   } catch (e: unknown) {
     /**
      * Parse failing rules
@@ -29,7 +30,7 @@ const runTest = (file: string): Array<{ lineNumber: string; rule: string }> => {
 };
 
 test('invalid ts', async () => {
-  expect(runTest('invalid-ts.ts')).toEqual([
+  expect(await runTest('invalid-ts.ts')).toEqual([
     {
       lineNumber: '2',
       rule: 'lint/style/useNodejsImportProtocol',
@@ -57,16 +58,16 @@ test('invalid ts', async () => {
   ]);
 });
 
-test('valid ts', () => {
-  expect(runTest('valid-ts.ts')).toEqual([]);
+test('valid ts', async () => {
+  expect(await runTest('valid-ts.ts')).toEqual([]);
 });
 
-test('valid react', () => {
-  expect(runTest('react-valid-ts.tsx')).toEqual([]);
+test('valid react', async () => {
+  expect(await runTest('react-valid-ts.tsx')).toEqual([]);
 });
 
-test('invalid react', () => {
-  expect(runTest('react-invalid-ts.tsx')).toEqual([
+test('invalid react', async () => {
+  expect(await runTest('react-invalid-ts.tsx')).toEqual([
     {
       lineNumber: '19',
       rule: 'lint/a11y/noRedundantAlt',

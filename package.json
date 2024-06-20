@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "check-formatting": "prettier --check .",
-    "test": "vitest run & npm run lint",
+    "test": "vitest run & npm run lint && npm run check-formatting",
     "lint": "biome check .",
     "prepublishOnly": "npm test"
   },
@@ -64,6 +64,7 @@
   "homepage": "https://github.com/axa-ch/easy-config#readme",
   "devDependencies": {
     "@biomejs/biome": "^1.8.1",
+    "execa": "^9.2.0",
     "prettier": "3.3.2",
     "stylelint": "^16.6.1",
     "stylelint-config-standard": "^36.0.0",
