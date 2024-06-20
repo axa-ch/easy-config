@@ -5,6 +5,10 @@ const RULE_REGEX = /(?<line>\d+?):\d+? (?<rule>[/A-z0-9]+)/gs;
 
 const runTest = async (file: string): Array<{ lineNumber: string; rule: string }> => {
   try {
+    /**
+     * Prefer execa to child_process.execSync since the latter hanged the tests on mac os devices
+     * Probably the issue was related to the npx command but the execa preferLogcal option helped to fix it
+     */
     await execa({
       stdio: 'pipe',
       encoding: 'utf8',
