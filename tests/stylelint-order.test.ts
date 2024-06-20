@@ -1,12 +1,13 @@
-import { test, expect } from 'vitest';
-import stylelint from 'stylelint';
+import stylelint, { type LintResult } from 'stylelint';
+import { expect, test } from 'vitest';
 import * as api from '../index';
 
-const isLintResultValid = ({ errored, warnings }) => errored === false && warnings.length === 0;
+const isLintResultValid = ({ errored, warnings }: LintResult) => errored === false && warnings.length === 0;
 
 test('Stylelint Order config', async () => {
   const { results } = await stylelint.lint({
     config: {
+      /* @ts-ignore */
       extends: [api.stylelint.base, api.stylelint.order],
     },
     files: ['tests/fixtures/order-valid.css', 'tests/fixtures/order-invalid.css'],

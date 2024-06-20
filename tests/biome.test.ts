@@ -3,7 +3,7 @@ import { expect, test } from 'vitest';
 
 const RULE_REGEX = /(?<line>\d+?):\d+? (?<rule>[/A-z0-9]+)/gs;
 
-const runTest = async (file: string): Array<{ lineNumber: string; rule: string }> => {
+const runTest = async (file: string): Promise<{ lineNumber: string; rule: string }[]> => {
   try {
     /**
      * Prefer execa to child_process.execSync since the latter hanged the tests on mac os devices
@@ -22,7 +22,7 @@ const runTest = async (file: string): Array<{ lineNumber: string; rule: string }
      * Biome is currently developing a json reporter: https://biomejs.dev/reference/reporters/#json
      * We could switch to this when it's ready
      */
-    if (typeof e?.message === 'string') {
+    if (e instanceof Error && typeof e?.message === 'string') {
       const failedRules = (e?.message as string).matchAll(RULE_REGEX);
       return Array.from(failedRules, (match) => ({
         lineNumber: match[1],

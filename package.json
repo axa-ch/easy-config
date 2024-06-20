@@ -3,6 +3,7 @@
   "version": "2.0.0",
   "description": "Modern and strict configuration files to build consistently web applications.",
   "main": "index.js",
+  "types": "index.d.ts",
   "type": "module",
   "scripts": {
     "check-formatting": "prettier --check .",
