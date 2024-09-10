@@ -33,15 +33,14 @@
     "axa"
   ],
   "peerDependencies": {
-    "@biomejs/biome": "^1.8.1",
-    "prettier": "^3.3.2"
+    "@biomejs/biome": "^1.7.0",
+    "prettier": "^3.0.0"
   },
   "optionalDependencies": {
-    "stylelint": "^16.5.0",
+    "stylelint": "^16.0.0",
     "stylelint-config-standard": "^36.0.0",
-    "stylelint-config-standard-scss": "^13.1.0",
-    "stylelint-order": "^6.0.4",
-    "stylelint-selector-bem-pattern": "^4.0.0"
+    "stylelint-config-standard-scss": "^13.0.0",
+    "stylelint-order": "^6.0.0"
   },
   "author": "AXA (https://axa.ch)",
   "maintainers": [
@@ -64,14 +63,14 @@
   },
   "homepage": "https://github.com/axa-ch/easy-config#readme",
   "devDependencies": {
-    "@biomejs/biome": "^1.8.1",
-    "execa": "^9.2.0",
-    "prettier": "3.3.2",
+    "@biomejs/biome": "^1.8.3",
+    "execa": "^9.3.1",
+    "prettier": "3.3.3",
     "stylelint": "^16.6.1",
-    "stylelint-config-standard": "^36.0.0",
+    "stylelint-config-standard": "^36.0.1",
     "stylelint-config-standard-scss": "^13.1.0",
     "stylelint-order": "^6.0.4",
-    "typescript": "^5.4.5",
-    "vitest": "^1.6.0"
+    "typescript": "^5.6.2",
+    "vitest": "^2.0.5"
   }
 }

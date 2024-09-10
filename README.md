@@ -39,7 +39,7 @@ Create a `biome.json` file at the root of your project
 
 ```json
 {
-  "$schema": "https://biomejs.dev/schemas/1.7.0/schema.json",
+  "$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
   "extends": ["./node_modules/@axa-ch/easy-config/biome/base.json"]
 }
 ```
