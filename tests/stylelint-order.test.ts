@@ -7,8 +7,7 @@ const isLintResultValid = ({ errored, warnings }: LintResult) => errored === fal
 test('Stylelint Order config', async () => {
   const { results } = await stylelint.lint({
     config: {
-      /* @ts-ignore */
-      extends: [api.stylelint.base, api.stylelint.order],
+      extends: [api.stylelint.base as string, api.stylelint.order as string],
     },
     files: ['tests/fixtures/order-valid.css', 'tests/fixtures/order-invalid.css'],
   });
