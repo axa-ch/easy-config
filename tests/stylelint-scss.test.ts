@@ -7,8 +7,7 @@ const isLintResultValid = ({ errored, warnings }: LintResult) => errored === fal
 test('Stylelint SCSS config', async () => {
   const { results } = await stylelint.lint({
     config: {
-      /* @ts-ignore */
-      extends: [api.stylelint.base, api.stylelint.scss],
+      extends: [api.stylelint.base as string, api.stylelint.scss as string],
     },
     files: ['tests/fixtures/valid.scss', 'tests/fixtures/invalid.scss'],
   });
