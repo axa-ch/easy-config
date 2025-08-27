@@ -1,7 +1,12 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.8.1/schema.json",
-  "organizeImports": {
-    "enabled": true
+  "$schema": "https://biomejs.dev/schemas/2.2.2/schema.json",
+  "root": false,
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    }
   },
   "linter": {
     "enabled": true,
@@ -12,15 +17,23 @@
         "useKeyWithMouseEvents": "off",
         "noNoninteractiveTabindex": "off"
       },
+      "correctness": {
+        "noUnusedVariables": "off",
+        "noUnusedFunctionParameters": "off"
+      },
+      "complexity": {
+        "noForEach": "error"
+      },
       "suspicious": {
         "noArrayIndexKey": "off"
+      },
+      "style": {
+        "useSelfClosingElements": "error"
       }
     }
   },
   "formatter": {
     "enabled": false,
-    "formatWithErrors": false,
-    "ignore": [],
     "attributePosition": "auto",
     "indentStyle": "space",
     "indentWidth": 2,

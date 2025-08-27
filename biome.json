@@ -1,6 +1,4 @@
 {
-  "extends": ["./biome/base.json"],
-  "files": {
-    "ignore": ["tests/fixtures/**"]
-  }
+  "$schema": "https://biomejs.dev/schemas/2.2.2/schema.json",
+  "extends": ["./biome/base.json"]
 }

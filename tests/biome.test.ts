@@ -13,7 +13,7 @@ const runTest = async (file: string): Promise<{ lineNumber: string; rule: string
       stdio: 'pipe',
       encoding: 'utf8',
       preferLocal: true,
-    })`biome check --config-path ./tests/biome.test.json ./tests/fixtures/${file}`;
+    })`biome check ./tests/fixtures/${file}`;
   } catch (e: unknown) {
     /**
      * Parse failing rules
@@ -44,10 +44,6 @@ test('invalid ts', async () => {
       rule: 'lint/suspicious/noExplicitAny',
     },
     {
-      lineNumber: '8',
-      rule: 'lint/complexity/noForEach',
-    },
-    {
       lineNumber: '10',
       rule: 'lint/suspicious/noConfusingVoidType',
     },
@@ -56,8 +52,20 @@ test('invalid ts', async () => {
       rule: 'lint/style/useImportType',
     },
     {
+      lineNumber: '2',
+      rule: 'lint/correctness/noUnusedImports',
+    },
+    {
       lineNumber: '12',
       rule: 'lint/performance/noAccumulatingSpread',
+    },
+    {
+      lineNumber: '1',
+      rule: 'assist/source/organizeImports',
+    },
+    {
+      lineNumber: '8',
+      rule: 'lint/complexity/noForEach',
     },
   ]);
 });
@@ -72,6 +80,14 @@ test('valid react', async () => {
 
 test('invalid react', async () => {
   expect(await runTest('react-invalid-ts.tsx')).toEqual([
+    {
+      lineNumber: '3',
+      rule: 'lint/suspicious/noTsIgnore',
+    },
+    {
+      lineNumber: '1',
+      rule: 'assist/source/organizeImports',
+    },
     {
       lineNumber: '19',
       rule: 'lint/a11y/noRedundantAlt',
