@@ -13,7 +13,7 @@ const runTest = async (file: string): Promise<{ lineNumber: string; rule: string
       stdio: 'pipe',
       encoding: 'utf8',
       preferLocal: true,
-    })`biome check ./tests/fixtures/${file}`;
+    })`biome check --config-path=./tests/test.json ./tests/fixtures/${file}`;
   } catch (e: unknown) {
     /**
      * Parse failing rules
