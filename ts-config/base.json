@@ -1,16 +1,11 @@
 {
   "compilerOptions": {
-    "target": "es2020",
-    "useDefineForClassFields": true,
-    "ignoreDeprecations": "6.0",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": false,
+    "target": "esnext",
+    "lib": ["dom", "esnext"],
     "skipLibCheck": true,
-    "esModuleInterop": false,
-    "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "esnext",
+    "module": "preserve",
     "moduleDetection": "force",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
@@ -20,7 +15,6 @@
     "noUncheckedSideEffectImports": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "strictNullChecks": true,
     "removeComments": true,
     "sourceMap": true,
     "noUnusedLocals": true
