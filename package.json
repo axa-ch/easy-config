@@ -43,6 +43,9 @@
     "stylelint-order": "^6.0.4 || ^7.0.0 || ^8.0.0"
   },
   "author": "AXA (https://axa.ch)",
+  "engines": {
+    "node": ">=22"
+  },
   "maintainers": [
     {
       "name": "Gianluca Guarini",
