@@ -72,5 +72,8 @@
     "stylelint-order": "^7.0.0",
     "typescript": "^6.0.2",
     "vitest": "^4.1.0"
+  },
+  "overrides": {
+    "postcss-selector-parser": ">=7.1.3"
   }
 }
