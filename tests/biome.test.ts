@@ -22,8 +22,8 @@ const runTest = async (file: string): Promise<{ lineNumber: string; rule: string
      * Biome is currently developing a json reporter: https://biomejs.dev/reference/reporters/#json
      * We could switch to this when it's ready
      */
-    if (e instanceof Error && typeof e?.message === 'string') {
-      const failedRules = (e?.message as string).matchAll(RULE_REGEX);
+    if (e instanceof Error && typeof e.message === 'string') {
+      const failedRules = e.message.matchAll(RULE_REGEX);
       return Array.from(failedRules, (match) => ({
         lineNumber: match[1],
         rule: match[2],

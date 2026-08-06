@@ -1,6 +1,6 @@
 {
   "name": "@axa-ch/easy-config",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "Modern and strict configuration files to build consistently web applications.",
   "main": "index.js",
   "types": "index.d.ts",
@@ -43,6 +43,9 @@
     "stylelint-order": "^6.0.4 || ^7.0.0 || ^8.0.0"
   },
   "author": "AXA (https://axa.ch)",
+  "engines": {
+    "node": ">=22"
+  },
   "maintainers": [
     {
       "name": "Gianluca Guarini",
@@ -66,11 +69,14 @@
     "@biomejs/biome": "^2.4.7",
     "execa": "^9.6.1",
     "prettier": "3.8.1",
-    "stylelint": "^16.23.1",
+    "stylelint": "^16.26.1",
     "stylelint-config-standard": "^39.0.0",
     "stylelint-config-standard-scss": "^15.0.1",
     "stylelint-order": "^7.0.0",
     "typescript": "^6.0.2",
     "vitest": "^4.1.0"
+  },
+  "overrides": {
+    "postcss-selector-parser": "^7.1.2"
   }
 }
