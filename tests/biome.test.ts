@@ -102,3 +102,22 @@ test('invalid react', async () => {
     },
   ]);
 });
+
+test('valid scss', async () => {
+  expect(await runTest('valid.scss')).toEqual([]);
+});
+
+test('invalid scss', async () => {
+  expect(await runTest('invalid.scss')).toEqual([
+    {
+      lineNumber: '9',
+      rule: 'lint/suspicious/noUnknownAtRules',
+    },
+  ]);
+});
+
+test('formats scss', async () => {
+  await expect(
+    execa({ preferLocal: true })`biome format --config-path=./tests/test.json ./tests/fixtures/unformatted.scss`,
+  ).rejects.toMatchObject({ exitCode: 1 });
+});

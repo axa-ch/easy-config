@@ -25,10 +25,10 @@ Modern and strict configuration files to build consistently web applications.
 ## Installation
 
 <a id='biome-installation'></a>
-Start by installing [BiomeJS](https://biomejs.dev/), [Prettier](https://prettier.io/) and `@axa-ch/easy-config`.
+Start by installing [Biome](https://biomejs.dev/) and `@axa-ch/easy-config`.
 
 ```shell
-npm i -D --save-exact @biomejs/biome @axa-ch/easy-config prettier
+npm i -D --save-exact @biomejs/biome @axa-ch/easy-config
 ```
 
 <a id='biome-configuration'></a>
@@ -44,24 +44,15 @@ Create a `biome.json` file at the root of your project
 }
 ```
 
-You can configure this to your
-liking. [Follow the Configuration guide from biome](https://biomejs.dev/reference/configuration/).
+You can configure this to your liking. [Follow the Biome configuration guide](https://biomejs.dev/reference/configuration/).
+The shared configuration enables Biome's linter and formatter for JavaScript, CSS, and SCSS.
 
-To configure prettier, add a `.prettierrc.js` file with the following content:
+Run checks and format files with Biome:
 
-```js
-import { prettier } from '@axa-ch/easy-config';
-
-export default prettier.base;
+```shell
+npx biome check .
+npx biome format --write .
 ```
-
-### Why not use `biome format`?
-
-Biomes [formatting support](https://biomejs.dev/internals/language-support/) is currently not developed enough for us to
-make the full move over to biome.
-For instance, Biome currently doesn't support [CSS Formatting](https://github.com/biomejs/biome/issues/1285) or
-Markdown.
-Furthermore, Biome doesn't plan to support SCSS in the foreseeing future, so it makes sense to stick to prettier.
 
 <a id='biome-integration'></a>
 
@@ -74,15 +65,8 @@ Biome provides plugins for the most common IDEs:
 
 ### IntelliJ
 
-When using IntelliJ, Biome and Prettier conflict when trying to run <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>
-Shift</kbd>+<kbd>P</kbd>. This is because Biome is set to run `biome check` when pressing this shortcut, Prettier is set
-up to format when this shortcut is used.
-To avoid this conflict we would recommend Setting the prettier configuration to manual and then checking
-the `Run on 'Reformat Code' action`. This way, you can press
-<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>L</kbd> to run Prettier. Alternatively, you can remap either of those commands to
-different keystrokes.
-
-![prettier-config](docs/prettier-config.png)
+Use the Biome IDE integration for linting and formatting. Configure your editor to run Biome's formatter on save if you
+want files to be formatted automatically.
 
 <a id='typescript-setup'></a>
 
@@ -123,7 +107,7 @@ export default {
 };
 ```
 
-<a id='stylelint-scss'></a>
+a id='stylelint-scss'></a>
 
 ## SCSS Setup
 

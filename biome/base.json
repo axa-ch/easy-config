@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.2.2/schema.json",
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "root": false,
   "assist": {
     "actions": {
@@ -11,7 +11,7 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true,
+      "preset": "recommended",
       "a11y": {
         "useKeyWithClickEvents": "off",
         "useKeyWithMouseEvents": "off",
@@ -33,7 +33,7 @@
     }
   },
   "formatter": {
-    "enabled": false,
+    "enabled": true,
     "attributePosition": "auto",
     "indentStyle": "space",
     "indentWidth": 2,
@@ -51,7 +51,28 @@
       "quoteStyle": "single",
       "bracketSpacing": true,
       "attributePosition": "multiline",
-      "jsxQuoteStyle": "single"
+      "jsxQuoteStyle": "single",
+      "trailingCommas": "all"
+    }
+  },
+  "css": {
+    "formatter": {
+      "enabled": true,
+      "quoteStyle": "single"
+    },
+    "linter": {
+      "enabled": true
+    }
+  },
+  "markdown": {
+    "formatter": {
+      "enabled": true,
+      "formatEmbeds": true,
+      "indentStyle": "space",
+      "indentWidth": 2,
+      "lineEnding": "lf",
+      "lineWidth": 120,
+      "proseWrap": "preserve"
     }
   },
   "vcs": {
