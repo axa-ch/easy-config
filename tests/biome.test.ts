@@ -116,6 +116,19 @@ test('invalid scss', async () => {
   ]);
 });
 
+test('sorted css properties', async () => {
+  expect(await runTest('order-valid.css')).toEqual([]);
+});
+
+test('unsorted css properties', async () => {
+  expect(await runTest('order-invalid.css')).toEqual([
+    {
+      lineNumber: '1',
+      rule: 'assist/source/useSortedProperties',
+    },
+  ]);
+});
+
 test('formats scss', async () => {
   await expect(
     execa({ preferLocal: true })`biome format --config-path=./tests/test.json ./tests/fixtures/unformatted.scss`,
