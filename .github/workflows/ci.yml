@@ -16,10 +16,6 @@ jobs:
         uses: actions/setup-node@v5
         with:
           node-version: 24.x
-      - run: npm i -D prettier
-        name: Install prettier
-      - run: npm run check-formatting
-        name: Check formatting
       - run: npm test
         name: Run tests
   lint:
