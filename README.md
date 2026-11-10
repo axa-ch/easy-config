@@ -16,7 +16,6 @@ Modern and strict configuration files to build consistently web applications.
 2. [Typescript Setup](#typescript-setup)
 3. [Stylelint Setup](#stylelint-setup)
    1. [SCSS Setup](#stylelint-scss)
-   2. [CSS Order Setup](#stylelint-order)
 
 <a id='getting-started'></a>
 
@@ -46,6 +45,8 @@ Create a `biome.json` file at the root of your project
 
 You can configure this to your liking. [Follow the Biome configuration guide](https://biomejs.dev/reference/configuration/).
 The shared configuration enables Biome's linter and formatter for JavaScript, CSS, and SCSS.
+It also enables Biome's [`useSortedProperties`](https://biomejs.dev/assist/actions/use-sorted-properties) assist action, so
+CSS properties are kept in a consistent order.
 
 Run checks and format files with Biome:
 
@@ -125,29 +126,6 @@ import { stylelint } from '@axa-ch/easy-config';
 /** @type {import('stylelint').Config} */
 export default {
   extends: [stylelint.base, stylelint.scss],
-};
-```
-
-<a id='stylelint-order'></a>
-
-## CSS Order Setup
-
-You can install this extension if you want to ensure that CSS Properties are defined in a consistent way.
-
-Start by installing the extension:
-
-```shell
-npm i -D --save-exact stylelint-order
-```
-
-Extend your stylelint configuration like shown below:
-
-```js
-import { stylelint } from '@axa-ch/easy-config';
-
-/** @type {import('stylelint').Config} */
-export default {
-  extends: [stylelint.base, stylelint.order],
 };
 ```
 
