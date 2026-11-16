@@ -11,7 +11,8 @@ test('Stylelint SCSS config', async () => {
     },
     files: ['tests/fixtures/valid.scss', 'tests/fixtures/invalid.scss'],
   });
-  const [validResult, invalidResult] = results;
+  const [invalidResult, validResult] = results;
+
   expect(isLintResultValid(validResult)).toBe(true);
   expect(isLintResultValid(invalidResult)).toBe(false);
 });
