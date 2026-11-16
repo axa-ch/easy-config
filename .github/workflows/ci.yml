@@ -17,6 +17,8 @@ jobs:
         with:
           node-version: 24.x
           cache: npm
+      - run: npm ci
+        name: Install deps
       - run: npm test
         name: Run tests
   lint:
