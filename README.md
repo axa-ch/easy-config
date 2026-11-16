@@ -108,7 +108,7 @@ export default {
 };
 ```
 
-a id='stylelint-scss'></a>
+<a id='stylelint-scss'></a>
 
 ## SCSS Setup
 
