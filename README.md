@@ -48,6 +48,10 @@ The shared configuration enables Biome's linter and formatter for JavaScript, CS
 It also enables Biome's [`useSortedProperties`](https://biomejs.dev/assist/actions/use-sorted-properties) assist action, so
 CSS properties are kept in a consistent order.
 
+[Tailwind CSS](https://tailwindcss.com/) is supported out of the box: Tailwind directives (`@theme`, `@apply`, `@utility`, ...)
+are parsed in CSS files, duplicate classes are removed, and class strings are sorted and simplified via Biome's Tailwind
+lint rules. Non-Tailwind classes are left untouched.
+
 Run checks and format files with Biome:
 
 ```shell

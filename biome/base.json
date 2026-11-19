@@ -5,7 +5,8 @@
     "actions": {
       "source": {
         "organizeImports": "on",
-        "useSortedProperties": "on"
+        "useSortedProperties": "on",
+        "noDuplicateClasses": "on"
       }
     }
   },
@@ -29,7 +30,19 @@
         "noArrayIndexKey": "off"
       },
       "style": {
-        "useSelfClosingElements": "error"
+        "useSelfClosingElements": "error",
+        "useConsistentArrayType": {
+          "level": "error",
+          "options": {
+            "syntax": "shorthand"
+          }
+        }
+      },
+      "nursery": {
+        "useTailwindSortedClasses": "error",
+        "useTailwindShorthandClasses": "error",
+        "noTailwindLegacyUtilities": "error",
+        "useTailwindVariablesShorthand": "error"
       }
     }
   },
@@ -63,6 +76,9 @@
     },
     "linter": {
       "enabled": true
+    },
+    "parser": {
+      "tailwindDirectives": true
     }
   },
   "markdown": {

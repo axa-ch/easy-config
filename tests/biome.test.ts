@@ -129,6 +129,56 @@ test('unsorted css properties', async () => {
   ]);
 });
 
+test('valid array type', async () => {
+  expect(await runTest('array-type-valid.ts')).toEqual([]);
+});
+
+test('invalid array type', async () => {
+  expect(await runTest('array-type-invalid.ts')).toEqual([
+    {
+      lineNumber: '1',
+      rule: 'lint/style/useConsistentArrayType',
+    },
+  ]);
+});
+
+test('parses tailwind css directives', async () => {
+  expect(await runTest('tailwind-valid.css')).toEqual([]);
+});
+
+test('valid tailwind classes', async () => {
+  expect(await runTest('tailwind-valid.tsx')).toEqual([]);
+});
+
+test('invalid tailwind classes', async () => {
+  expect(await runTest('tailwind-invalid.tsx')).toEqual([
+    {
+      lineNumber: '2',
+      rule: 'assist/source/noDuplicateClasses',
+    },
+    {
+      lineNumber: '2',
+      rule: 'lint/nursery/useTailwindSortedClasses',
+    },
+    {
+      lineNumber: '3',
+      rule: 'lint/nursery/useTailwindShorthandClasses',
+    },
+    {
+      lineNumber: '4',
+      rule: 'lint/nursery/useTailwindSortedClasses',
+    },
+    {
+      lineNumber: '5',
+      rule: 'lint/nursery/noTailwindLegacyUtilities',
+    },
+    {
+      lineNumber: '6',
+      rule: 'lint/nursery/useTailwindVariablesShorthand',
+    },
+  ]);
+});
+
 test('formats scss', async () => {
   await expect(
     execa({ preferLocal: true })`biome format --config-path=./tests/test.json ./tests/fixtures/unformatted.scss`,

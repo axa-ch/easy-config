@@ -1,0 +1,19 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-brand: #00008f;
+}
+
+@utility content-auto {
+  content-visibility: auto;
+}
+
+@custom-variant theme-dark (&:where(.dark, .dark *));
+
+.btn {
+  @apply rounded px-4 py-2;
+}
+
+.title {
+  font-size: --theme(--text-2xl);
+}
